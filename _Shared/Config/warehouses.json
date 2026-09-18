@@ -1,0 +1,29 @@
+{
+  "_comment": "Warehouse list per plant. Used by LX02, LX09, LT23 orchestrators.",
+  "plants": {
+    "1478": {
+      "name": "Flowergate",
+      "warehouses": [
+        "H51" , "H53"
+      ]
+    },
+    "4981": {
+      "name": "Agbara DC",
+      "warehouses": [
+        "AZ8" , "AQC"
+      ]
+    },
+    "6797": {
+      "name": "Plant 6797",
+      "warehouses": [
+        "HAA"
+      ]
+    },
+    "1477": {
+      "name": "Plant 1477",
+      "warehouses": [
+        "447"
+      ]
+    }
+  }
+}

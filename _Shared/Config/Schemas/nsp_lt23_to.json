@@ -1,0 +1,54 @@
+{
+    "$schema": "table_v1",
+    "_comment": "LT23 Transfer Orders. Append New. Warehouse-level. Rowkey = TO number + item.",
+    "solution": {"unique_name": "NGSPAutomation", "publisher_prefix": "nsp"},
+    "table": {
+        "logical_name": "nsp_lt23_to",
+        "display_name": "LT23 Transfer Orders",
+        "display_collection_name": "LT23 Transfer Order Records",
+        "description": "SAP LT23 transfer orders (2-day window). Append-new (history preserved).",
+        "ownership": "OrganizationOwned",
+        "primary_column": {
+            "logical_name": "nsp_rowkey",
+            "display_name": "Row Key",
+            "description": "Composite: {to_number}|{to_item}.",
+            "max_length": 200,
+            "required": "ApplicationRequired"
+        }
+    },
+    "properties": {
+        "auditing_enabled": false,
+        "change_tracking_enabled": false,
+        "duplicate_detection_enabled": false,
+        "mobile_enabled": false,
+        "offline_enabled": false
+    },
+    "columns": [
+        {"logical_name": "nsp_warehouse",      "display_name": "Warehouse",           "type": "Text", "max_length": 3, "required": "ApplicationRequired"},
+        {"logical_name": "nsp_plant",          "display_name": "Plant",               "type": "Text", "max_length": 4},
+        {"logical_name": "nsp_to_number",      "display_name": "TO Number",           "type": "Text", "max_length": 10, "required": "ApplicationRequired"},
+        {"logical_name": "nsp_to_item",        "display_name": "TO Item",             "type": "Text", "max_length": 4,  "required": "ApplicationRequired"},
+        {"logical_name": "nsp_movement_type",  "display_name": "Movement Type",       "type": "Text", "max_length": 3},
+        {"logical_name": "nsp_material",       "display_name": "Material",            "type": "Text", "max_length": 18},
+        {"logical_name": "nsp_material_desc",  "display_name": "Material Description","type": "Text", "max_length": 80},
+        {"logical_name": "nsp_src_type",       "display_name": "Source Storage Type", "type": "Text", "max_length": 4},
+        {"logical_name": "nsp_src_bin",        "display_name": "Source Storage Bin",  "type": "Text", "max_length": 10},
+        {"logical_name": "nsp_dest_type",      "display_name": "Dest Storage Type",   "type": "Text", "max_length": 4},
+        {"logical_name": "nsp_dest_bin",       "display_name": "Dest Storage Bin",    "type": "Text", "max_length": 10},
+        {"logical_name": "nsp_batch",          "display_name": "Batch",               "type": "Text", "max_length": 10},
+        {"logical_name": "nsp_quantity",       "display_name": "Quantity",            "type": "Decimal", "precision": 3, "min_value": -999999999.999, "max_value": 999999999.999},
+        {"logical_name": "nsp_uom",            "display_name": "Base UoM",            "type": "Text", "max_length": 3},
+        {"logical_name": "nsp_creation_date",  "display_name": "Creation Date",       "type": "DateOnly"},
+        {"logical_name": "nsp_confirm_date",   "display_name": "Confirmation Date",   "type": "DateOnly"}
+    ],
+    "include_common": true,
+    "alternate_keys": [
+        {"name": "ak_nsp_lt23_rowkey", "display_name": "Row Key Key", "columns": ["nsp_rowkey"]}
+    ],
+    "rowkey": {
+        "strategy": "composite",
+        "columns": ["nsp_to_number", "nsp_to_item"],
+        "separator": "|",
+        "max_length": 200
+    }
+}

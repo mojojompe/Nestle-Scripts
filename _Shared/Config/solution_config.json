@@ -1,0 +1,27 @@
+{
+    "$schema": "solution_config_v1",
+    "_comment": "Config for the NGSP Automation solution. Read by create_solution.py.",
+
+    "publisher": {
+        "_comment": "Lookup criteria to find the publisher this solution should belong to. The script searches by 'prefix'. 'expected_uniquename' and 'expected_friendlyname' are sanity checks -- warn if they don't match.",
+        "prefix": "nsp",
+        "expected_uniquename": "ngsupplychainproject",
+        "expected_friendlyname": "NG Supply Chain Project"
+    },
+
+    "solution": {
+        "_comment": "Solution properties. 'unique_name' is locked once created. 'friendly_name' and 'description' can be updated later without recreating the solution.",
+        "unique_name": "NGSPAutomation",
+        "friendly_name": "NGSP Automation",
+        "description": "Nestle Nigeria Supply Chain Project -- SAP-to-Dataverse automation. Contains tables and columns for LX02, LX09, LT23, MB51, MB5T extractions across Flowergate (1478), Agbara (4981), and Abaji (6797) plants.",
+        "version": "1.0.0.0"
+    },
+
+    "behavior": {
+        "_comment": "Runtime behavior toggles.",
+        "fail_if_publisher_missing": true,
+        "warn_on_publisher_metadata_mismatch": true,
+        "skip_if_solution_exists": true,
+        "print_summary": true
+    }
+}

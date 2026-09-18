@@ -1,0 +1,29 @@
+{
+    "$schema": "common_columns_v1",
+    "_comment": "Columns automatically merged into any table that sets 'include_common: true'.",
+
+    "columns": [
+        {
+            "logical_name": "nsp_rundate",
+            "display_name": "Run Date",
+            "description": "Date this extraction run was executed.",
+            "type": "DateOnly",
+            "required": "ApplicationRequired"
+        },
+        {
+            "logical_name": "nsp_runtimestamp",
+            "display_name": "Run Timestamp",
+            "description": "Full timestamp of the extraction run (UTC).",
+            "type": "DateTime",
+            "required": "ApplicationRequired"
+        },
+        {
+            "logical_name": "nsp_source_machine",
+            "display_name": "Source Machine",
+            "description": "Hostname of the machine that ran the extraction (e.g. NG10-QZ8ZW5S).",
+            "type": "Text",
+            "max_length": 40,
+            "required": "None"
+        }
+    ]
+}

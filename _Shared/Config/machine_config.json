@@ -1,0 +1,16 @@
+{
+  "_comment": "Machine-aware Python paths + authorization. Only 'authorized' machines may run the main orchestrators.",
+  "machines": {
+    "NG10-QZ8ZW5S": {
+      "role": "desktop",
+      "authorized": true,
+      "python_exe": "C:\\Users\\NGSoyemiOl\\AppData\\Local\\miniconda3\\envs\\automation\\python.exe"
+    },
+    "NG10-M7JH1MQ": {
+      "role": "laptop",
+      "authorized": true,
+      "python_exe": "C:\\Users\\NGSoyemiOl\\AppData\\Local\\miniconda3\\envs\\automation\\python.exe"
+    }
+  },
+  "primary_machine": "NG10-QZ8ZW5S"
+}

@@ -1,0 +1,52 @@
+{
+    "$schema": "extract_profile_v1",
+    "_comment": "LX09 = Transfer Requirements (processed). CLASSIC UNCONVERTED export (fixed-width TEXT .csv). NO Excel auto-open -> NO lock. Post-processed by transfer_req_pairs_fwf (char-overlay of stepped pairs -> read_fwf). Warehouse=ctxtB1_LGNUM; dates=ctxtBDATU-LOW/HIGH.",
+    "tcode": "/nLX09",
+    "exec_timeout": 180,
+    "selection_fields": [
+        {"id": "wnd[0]/usr/ctxtB1_LGNUM", "source": "warehouse"}
+    ],
+    "date_fields": {
+        "from_id": "wnd[0]/usr/ctxtBDATU-LOW",
+        "to_id": "wnd[0]/usr/ctxtBDATU-HIGH"
+    },
+    "export": {
+        "_comment": "CLASSIC SAPLSPO5, UNCONVERTED (radio idx 0 -> fixed-width text). Does NOT open Excel. Flow: radio -> btn[0] -> file dialog (no btn[20]).",
+        "mode": "classic",
+        "menu_path": "wnd[0]/mbar/menu[0]/menu[1]/menu[0]",
+        "format_radio_index": 0,
+        "pre_confirm_btn": "wnd[1]/tbar[0]/btn[0]",
+        "confirm_btn": null,
+        "path_field": "wnd[1]/usr/ctxtDY_PATH",
+        "filename_field": "wnd[1]/usr/ctxtDY_FILENAME",
+        "save_btn": "wnd[1]/tbar[0]/btn[11]",
+        "output_ext": ".csv"
+    },
+
+    "post_process": "transfer_req_pairs_fwf",
+
+    "_comment_columns": "column_map keys = post-processor OUTPUT column names; values = Dataverse logical names. warehouse filled from unit.",
+    "column_map": {
+        "TR Number":   "nsp_tr_number",
+        "Material":    "nsp_material",
+        "MTy":         "nsp_movement_type",
+        "Typ":         "nsp_storagetype",
+        "StorageBin":  "nsp_storagebin",
+        "Mat. Doc.":   "nsp_mat_doc",
+        "Plnt":        "nsp_plant",
+        "Location":    "nsp_storage_location",
+        "Rqmnt.No.":   "nsp_requirement_no",
+        "Batch":       "nsp_batch",
+        "Created On":  "nsp_created_on",
+        "Status":      "nsp_status",
+        "TR Quantity": "nsp_tr_quantity",
+        "TO Quantity": "nsp_to_quantity",
+        "Status%":     "nsp_status_pct",
+        "Time":        "nsp_time"
+    },
+
+    "force_string_cols": [],
+    "date_cols": [],
+    "decimal_cols": [],
+    "sap_date_fmt": "%d.%m.%Y"
+}

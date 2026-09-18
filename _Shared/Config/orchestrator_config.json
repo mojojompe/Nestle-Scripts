@@ -1,0 +1,46 @@
+{
+    "_comment": "Global runtime settings. Adjust 'max_parallel_sessions' if SAP quota changes.",
+    "sap": {
+        "max_parallel_sessions": 24,
+        "per_transaction_cap": {
+            "LX02": 6,
+            "LX09": 6,
+            "LT23": 6,
+            "MB51": 3,
+            "MB5T": 3
+        },
+        "session_start_stagger_seconds": 1.5
+    },
+    "date_windows": {
+        "_comment": "Sliding windows relative to run date (today).",
+        "LX02": {"mode": "snapshot"},
+        "LX09": {"mode": "range", "days_back": 1, "include_today": true},
+        "LT23": {"mode": "range", "days_back": 1, "include_today": true},
+        "MB51": {"mode": "range", "days_back": 1, "include_today": true},
+        "MB5T": {"mode": "snapshot"}
+    },
+    "dataverse": {
+        "_auth_notes": "Start with 'interactive' -- no app registration needed. Switch to 'client_secret' once NGSP-SCBOT app is ready.",
+        "_auth_mode_options": ["interactive", "device_code", "azure_cli", "client_secret"],
+        "environment_url": "https://org6f0703be.crm.dynamics.com",
+        "tenant_id": "12a3af23-a769-4654-847f-958f3d479f4a",
+        "auth_mode": "interactive",
+        "client_id": null,
+        "secret_reference": null,
+        "token_cache_name": "ngsp_scbot",
+        "tables": {
+            "LX02": "nsp_lx02_stock",
+            "LX09": "nsp_lx09_stock",
+            "LT23": "nsp_lt23_to",
+            "MB51": "nsp_mb51_movements",
+            "MB5T": "nsp_mb5t_stockintransit"
+        },
+        "batch_size": 500,
+        "progressive_write": true
+    },
+    "runtime": {
+        "output_format": "csv",
+        "keep_local_output_days": 7,
+        "archive_after_upload": true
+    }
+}

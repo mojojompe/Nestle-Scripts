@@ -1,0 +1,39 @@
+{
+    "$schema": "extract_profile_v1",
+    "_comment": "LT23 Transfer Orders. Warehouse-level, APPEND NEW (2-day window). Field IDs SAP-standard best-effort -- validate when testing.",
+    "tcode": "/nLT23",
+    "exec_timeout": 180,
+    "selection_fields": [
+        {"id": "wnd[0]/usr/ctxtT1_LGNUM", "source": "warehouse"}
+    ],
+    "date_fields": {
+        "_comment": "LT23 creation-date range -- VALIDATE these IDs.",
+        "from_id": "wnd[0]/usr/ctxtS1_BDATU-LOW",
+        "to_id": "wnd[0]/usr/ctxtS1_BDATU-HIGH"
+    },
+    "column_map": {
+        "Warehouse Number": "nsp_warehouse",
+        "Transfer Order Number": "nsp_to_number",
+        "Transfer Order Item": "nsp_to_item",
+        "Movement Type": "nsp_movement_type",
+        "Material": "nsp_material",
+        "Material Description": "nsp_material_desc",
+        "Source Storage Type": "nsp_src_type",
+        "Source Storage Bin": "nsp_src_bin",
+        "Dest Storage Type": "nsp_dest_type",
+        "Dest Storage Bin": "nsp_dest_bin",
+        "Batch": "nsp_batch",
+        "Source target quantity": "nsp_quantity",
+        "Base Unit of Measure": "nsp_uom",
+        "Creation Date": "nsp_creation_date",
+        "Confirmation Date": "nsp_confirm_date",
+        "Plant": "nsp_plant"
+    },
+    "force_string_cols": ["Transfer Order Number", "Transfer Order Item",
+                          "Material", "Batch", "Warehouse Number", "Plant",
+                          "Movement Type", "Source Storage Type", "Source Storage Bin",
+                          "Dest Storage Type", "Dest Storage Bin"],
+    "date_cols": ["Creation Date", "Confirmation Date"],
+    "decimal_cols": ["Source target quantity"],
+    "sap_date_fmt": "%d.%m.%Y"
+}

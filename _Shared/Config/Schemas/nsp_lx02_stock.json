@@ -1,0 +1,55 @@
+{
+    "$schema": "table_v1",
+    "_comment": "LX02 warehouse stock snapshot. Overwrite. Warehouse-level. ALREADY DEPLOYED.",
+    "solution": {"unique_name": "NGSPAutomation", "publisher_prefix": "nsp"},
+    "table": {
+        "logical_name": "nsp_lx02_stock",
+        "display_name": "LX02 Stock",
+        "display_collection_name": "LX02 Stock Records",
+        "description": "SAP LX02 warehouse stock snapshot per plant/warehouse. Populated daily; overwrite each run.",
+        "ownership": "OrganizationOwned",
+        "primary_column": {
+            "logical_name": "nsp_rowkey",
+            "display_name": "Row Key",
+            "description": "Storage Unit when present; falls back to 'M-{material}|{batch}' when Storage Unit is blank (bulk storage).",
+            "max_length": 200,
+            "required": "ApplicationRequired"
+        }
+    },
+    "properties": {
+        "auditing_enabled": false,
+        "change_tracking_enabled": true,
+        "duplicate_detection_enabled": false,
+        "mobile_enabled": false,
+        "offline_enabled": false
+    },
+    "columns": [
+        {"logical_name": "nsp_plant",            "display_name": "Plant",               "type": "Text", "max_length": 4,  "required": "ApplicationRequired"},
+        {"logical_name": "nsp_warehouse",        "display_name": "Warehouse",           "type": "Text", "max_length": 3,  "required": "ApplicationRequired"},
+        {"logical_name": "nsp_material",         "display_name": "Material",            "type": "Text", "max_length": 18, "required": "ApplicationRequired"},
+        {"logical_name": "nsp_material_desc",    "display_name": "Material Description","type": "Text", "max_length": 80},
+        {"logical_name": "nsp_storage_location", "display_name": "Storage Location",    "type": "Text", "max_length": 4},
+        {"logical_name": "nsp_stock_category",   "display_name": "Stock Category",      "type": "Text", "max_length": 4},
+        {"logical_name": "nsp_batch",            "display_name": "Batch",               "type": "Text", "max_length": 10},
+        {"logical_name": "nsp_storagetype",      "display_name": "Storage Type",        "type": "Text", "max_length": 4},
+        {"logical_name": "nsp_storagebin",       "display_name": "Storage Bin",         "type": "Text", "max_length": 10},
+        {"logical_name": "nsp_available_stock",  "display_name": "Available Stock",     "type": "Decimal", "precision": 3, "min_value": -999999999.999, "max_value": 999999999.999},
+        {"logical_name": "nsp_uom",              "display_name": "Base UoM",            "type": "Text", "max_length": 3},
+        {"logical_name": "nsp_gr_date",          "display_name": "GR Date",             "type": "DateOnly"},
+        {"logical_name": "nsp_storage_unit",     "display_name": "Storage Unit",        "type": "Text", "max_length": 20},
+        {"logical_name": "nsp_sled_bbd",         "display_name": "SLED/BBD",            "type": "DateOnly"},
+        {"logical_name": "nsp_last_movement",    "display_name": "Last Movement",       "type": "DateOnly"}
+    ],
+    "include_common": true,
+    "alternate_keys": [
+        {"name": "ak_nsp_lx02_rowkey", "display_name": "Row Key Alternate Key", "columns": ["nsp_rowkey"]}
+    ],
+    "rowkey": {
+        "strategy": "storage_unit_with_fallback",
+        "primary_column": "nsp_storage_unit",
+        "fallback_prefix": "M-",
+        "fallback_columns": ["nsp_material", "nsp_batch"],
+        "fallback_separator": "|",
+        "max_length": 200
+    }
+}

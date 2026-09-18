@@ -1,0 +1,4 @@
+{
+    "_comment": "Plant list. Used by MB51 and MB5T orchestrators (plant-level extraction).",
+    "plants": ["4981", "1478", "6797", "1477"]
+}

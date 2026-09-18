@@ -1,0 +1,35 @@
+{
+    "$schema": "extract_profile_v1",
+    "_comment": "MB51 Material Documents. Plant-level, APPEND NEW (2-day posting window). Field IDs SAP-standard best-effort -- validate when testing.",
+    "tcode": "/nMB51",
+    "exec_timeout": 240,
+    "selection_fields": [
+        {"id": "wnd[0]/usr/ctxtWERKS-LOW", "source": "plant"}
+    ],
+    "date_fields": {
+        "_comment": "MB51 posting-date range (BUDAT) -- VALIDATE these IDs.",
+        "from_id": "wnd[0]/usr/ctxtBUDAT-LOW",
+        "to_id": "wnd[0]/usr/ctxtBUDAT-HIGH"
+    },
+    "column_map": {
+        "Plant": "nsp_plant",
+        "Material": "nsp_material",
+        "Material Description": "nsp_material_desc",
+        "Movement Type": "nsp_movement_type",
+        "Material Document": "nsp_doc_number",
+        "Material Document Item": "nsp_doc_item",
+        "Posting Date": "nsp_posting_date",
+        "Entry Date": "nsp_entry_date",
+        "Quantity": "nsp_quantity",
+        "Base Unit of Measure": "nsp_uom",
+        "Storage Location": "nsp_storage_location",
+        "Batch": "nsp_batch",
+        "Amount in LC": "nsp_amount_lc"
+    },
+    "force_string_cols": ["Material", "Batch", "Plant", "Movement Type",
+                          "Material Document", "Material Document Item",
+                          "Storage Location"],
+    "date_cols": ["Posting Date", "Entry Date"],
+    "decimal_cols": ["Quantity", "Amount in LC"],
+    "sap_date_fmt": "%d.%m.%Y"
+}

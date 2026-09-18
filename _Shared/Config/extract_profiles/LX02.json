@@ -1,0 +1,33 @@
+{
+    "$schema": "extract_profile_v1",
+    "_comment": "LX02 Stock. PROVEN in production. Warehouse-level, snapshot.",
+    "tcode": "/nLX02",
+    "exec_timeout": 180,
+    "selection_fields": [
+        {"id": "wnd[0]/usr/ctxtS1_LGNUM", "source": "warehouse"}
+    ],
+    "date_fields": null,
+    "column_map": {
+        "Plant": "nsp_plant",
+        "Material": "nsp_material",
+        "Material Description": "nsp_material_desc",
+        "Storage Location": "nsp_storage_location",
+        "Stock Category": "nsp_stock_category",
+        "Batch": "nsp_batch",
+        "Storage Type": "nsp_storagetype",
+        "Storage Bin": "nsp_storagebin",
+        "Available stock": "nsp_available_stock",
+        "Base Unit of Measure": "nsp_uom",
+        "GR Date": "nsp_gr_date",
+        "Storage Unit": "nsp_storage_unit",
+        "SLED/BBD": "nsp_sled_bbd",
+        "Last movement": "nsp_last_movement",
+        "Warehouse": "nsp_warehouse"
+    },
+    "force_string_cols": ["Material", "Batch", "Storage Unit", "Plant",
+                          "Storage Type", "Storage Bin", "Storage Location",
+                          "Stock Category", "Warehouse"],
+    "date_cols": ["GR Date", "SLED/BBD", "Last movement"],
+    "decimal_cols": ["Available stock"],
+    "sap_date_fmt": "%d.%m.%Y"
+}

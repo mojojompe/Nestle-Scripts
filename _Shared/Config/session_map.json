@@ -1,0 +1,330 @@
+{
+  "LX02": {
+    "connections_logical": [
+      0
+    ],
+    "connections": [
+      1
+    ],
+    "sessions_per_connection": {
+      "0": 7
+    },
+    "shell_session": 0,
+    "assignments": {
+      "LX02_4981_AZ8": {
+        "conn_logical": 0,
+        "conn_physical": 1,
+        "session": 1,
+        "plant": "4981",
+        "warehouse": "AZ8",
+        "valid": true
+      },
+      "LX02_4981_AQC": {
+        "conn_logical": 0,
+        "conn_physical": 1,
+        "session": 2,
+        "plant": "4981",
+        "warehouse": "AQC",
+        "valid": true
+      },
+      "LX02_1478_H51": {
+        "conn_logical": 0,
+        "conn_physical": 1,
+        "session": 3,
+        "plant": "1478",
+        "warehouse": "H51",
+        "valid": true
+      },
+      "LX02_6797_HAA": {
+        "conn_logical": 0,
+        "conn_physical": 1,
+        "session": 4,
+        "plant": "6797",
+        "warehouse": "HAA",
+        "valid": true
+      },
+      "LX02_8337_HAB": {
+        "conn_logical": 0,
+        "conn_physical": 1,
+        "session": 5,
+        "plant": "8337",
+        "warehouse": "HAB",
+        "valid": true
+      },
+      "LX02_1477_447": {
+        "conn_logical": 0,
+        "conn_physical": 1,
+        "session": 6,
+        "plant": "1477",
+        "warehouse": "447",
+        "valid": true
+      },
+      "LX02_1478_H53": {
+        "conn_logical": 0,
+        "conn_physical": 1,
+        "session": 7,
+        "plant": "1478",
+        "warehouse": "H53",
+        "valid": true
+      }
+    },
+    "expected": 7,
+    "source": "config.assign_sessions"
+  },
+  "LX09": {
+    "connections_logical": [
+      1
+    ],
+    "connections": [
+      2
+    ],
+    "sessions_per_connection": {
+      "1": 3
+    },
+    "shell_session": 0,
+    "assignments": {
+      "LX09_4981_AZ8": {
+        "conn_logical": 1,
+        "conn_physical": 2,
+        "session": 1,
+        "plant": "4981",
+        "warehouse": "AZ8",
+        "valid": true
+      },
+      "LX09_1478_H51": {
+        "conn_logical": 1,
+        "conn_physical": 2,
+        "session": 2,
+        "plant": "1478",
+        "warehouse": "H51",
+        "valid": true
+      },
+      "LX09_8337_HAB": {
+        "conn_logical": 1,
+        "conn_physical": 2,
+        "session": 3,
+        "plant": "8337",
+        "warehouse": "HAB",
+        "valid": true
+      }
+    },
+    "expected": 3,
+    "source": "config.assign_sessions"
+  },
+  "LT23": {
+    "connections_logical": [
+      3
+    ],
+    "connections": [
+      3
+    ],
+    "sessions_per_connection": {
+      "3": 7
+    },
+    "shell_session": 0,
+    "assignments": {
+      "LT23_4981_AZ8": {
+        "conn_logical": 3,
+        "conn_physical": 3,
+        "session": 1,
+        "plant": "4981",
+        "warehouse": "AZ8",
+        "valid": false
+      },
+      "LT23_4981_AQC": {
+        "conn_logical": 3,
+        "conn_physical": 3,
+        "session": 2,
+        "plant": "4981",
+        "warehouse": "AQC",
+        "valid": false
+      },
+      "LT23_1478_H51": {
+        "conn_logical": 3,
+        "conn_physical": 3,
+        "session": 3,
+        "plant": "1478",
+        "warehouse": "H51",
+        "valid": false
+      },
+      "LT23_6797_HAA": {
+        "conn_logical": 3,
+        "conn_physical": 3,
+        "session": 4,
+        "plant": "6797",
+        "warehouse": "HAA",
+        "valid": false
+      },
+      "LT23_8337_HAB": {
+        "conn_logical": 3,
+        "conn_physical": 3,
+        "session": 5,
+        "plant": "8337",
+        "warehouse": "HAB",
+        "valid": false
+      },
+      "LT23_1477_447": {
+        "conn_logical": 3,
+        "conn_physical": 3,
+        "session": 6,
+        "plant": "1477",
+        "warehouse": "447",
+        "valid": false
+      },
+      "LT23_1478_H53": {
+        "conn_logical": 3,
+        "conn_physical": 3,
+        "session": 7,
+        "plant": "1478",
+        "warehouse": "H53",
+        "valid": false
+      }
+    },
+    "expected": 7,
+    "source": "config.assign_sessions"
+  },
+  "MB51": {
+    "connections_logical": [
+      2
+    ],
+    "connections": [
+      5
+    ],
+    "sessions_per_connection": {
+      "2": 5
+    },
+    "shell_session": 0,
+    "assignments": {
+      "MB51_4981": {
+        "conn_logical": 2,
+        "conn_physical": 5,
+        "session": 1,
+        "plant": "4981",
+        "warehouse": null,
+        "valid": true
+      },
+      "MB51_1477": {
+        "conn_logical": 2,
+        "conn_physical": 5,
+        "session": 2,
+        "plant": "1477",
+        "warehouse": null,
+        "valid": true
+      },
+      "MB51_6797": {
+        "conn_logical": 2,
+        "conn_physical": 5,
+        "session": 3,
+        "plant": "6797",
+        "warehouse": null,
+        "valid": true
+      },
+      "MB51_1478": {
+        "conn_logical": 2,
+        "conn_physical": 5,
+        "session": 4,
+        "plant": "1478",
+        "warehouse": null,
+        "valid": true
+      },
+      "MB51_8337": {
+        "conn_logical": 2,
+        "conn_physical": 5,
+        "session": 5,
+        "plant": "8337",
+        "warehouse": null,
+        "valid": true
+      }
+    },
+    "expected": 5,
+    "source": "config.assign_sessions"
+  },
+  "MB5T": {
+    "connections_logical": [
+      4
+    ],
+    "connections": [
+      7
+    ],
+    "sessions_per_connection": {
+      "4": 5
+    },
+    "shell_session": 0,
+    "assignments": {
+      "MB5T_4981": {
+        "conn_logical": 4,
+        "conn_physical": 7,
+        "session": 1,
+        "plant": "4981",
+        "warehouse": null,
+        "valid": true
+      },
+      "MB5T_1477": {
+        "conn_logical": 4,
+        "conn_physical": 7,
+        "session": 2,
+        "plant": "1477",
+        "warehouse": null,
+        "valid": true
+      },
+      "MB5T_6797": {
+        "conn_logical": 4,
+        "conn_physical": 7,
+        "session": 3,
+        "plant": "6797",
+        "warehouse": null,
+        "valid": true
+      },
+      "MB5T_1478": {
+        "conn_logical": 4,
+        "conn_physical": 7,
+        "session": 4,
+        "plant": "1478",
+        "warehouse": null,
+        "valid": true
+      },
+      "MB5T_8337": {
+        "conn_logical": 4,
+        "conn_physical": 7,
+        "session": 5,
+        "plant": "8337",
+        "warehouse": null,
+        "valid": true
+      }
+    },
+    "expected": 5,
+    "source": "config.assign_sessions"
+  },
+  "VL06F": {
+    "connections_logical": [
+      5
+    ],
+    "connections": [
+      18
+    ],
+    "sessions_per_connection": {
+      "5": 2
+    },
+    "shell_session": 0,
+    "assignments": {
+      "VL06F_1477_NG77": {
+        "conn_logical": 5,
+        "conn_physical": 18,
+        "session": 1,
+        "plant": "1477",
+        "warehouse": "NG77",
+        "valid": false
+      },
+      "VL06F_6797_NG97": {
+        "conn_logical": 5,
+        "conn_physical": 18,
+        "session": 2,
+        "plant": "6797",
+        "warehouse": "NG97",
+        "valid": false
+      }
+    },
+    "expected": 2,
+    "source": "config.assign_sessions"
+  }
+}

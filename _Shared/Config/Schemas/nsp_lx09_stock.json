@@ -1,0 +1,52 @@
+{
+    "$schema": "table_v1",
+    "_comment": "LX09 stock snapshot. Overwrite. Warehouse-level.",
+    "solution": {"unique_name": "NGSPAutomation", "publisher_prefix": "nsp"},
+    "table": {
+        "logical_name": "nsp_lx09_stock",
+        "display_name": "LX09 Stock",
+        "display_collection_name": "LX09 Stock Records",
+        "description": "SAP LX09 warehouse stock (2-day GR window). Overwrite each run.",
+        "ownership": "OrganizationOwned",
+        "primary_column": {
+            "logical_name": "nsp_rowkey",
+            "display_name": "Row Key",
+            "description": "Storage Unit, or M-{material}|{batch} fallback.",
+            "max_length": 200,
+            "required": "ApplicationRequired"
+        }
+    },
+    "properties": {
+        "auditing_enabled": false,
+        "change_tracking_enabled": true,
+        "duplicate_detection_enabled": false,
+        "mobile_enabled": false,
+        "offline_enabled": false
+    },
+    "columns": [
+        {"logical_name": "nsp_plant",           "display_name": "Plant",               "type": "Text", "max_length": 4,  "required": "ApplicationRequired"},
+        {"logical_name": "nsp_warehouse",       "display_name": "Warehouse",           "type": "Text", "max_length": 3,  "required": "ApplicationRequired"},
+        {"logical_name": "nsp_material",        "display_name": "Material",            "type": "Text", "max_length": 18, "required": "ApplicationRequired"},
+        {"logical_name": "nsp_material_desc",   "display_name": "Material Description","type": "Text", "max_length": 80},
+        {"logical_name": "nsp_batch",           "display_name": "Batch",               "type": "Text", "max_length": 10},
+        {"logical_name": "nsp_storagetype",     "display_name": "Storage Type",        "type": "Text", "max_length": 4},
+        {"logical_name": "nsp_storagebin",      "display_name": "Storage Bin",         "type": "Text", "max_length": 10},
+        {"logical_name": "nsp_total_stock",     "display_name": "Total Stock",         "type": "Decimal", "precision": 3, "min_value": -999999999.999, "max_value": 999999999.999},
+        {"logical_name": "nsp_uom",             "display_name": "Base UoM",            "type": "Text", "max_length": 3},
+        {"logical_name": "nsp_gr_date",         "display_name": "GR Date",             "type": "DateOnly"},
+        {"logical_name": "nsp_storage_unit",    "display_name": "Storage Unit",        "type": "Text", "max_length": 20},
+        {"logical_name": "nsp_sled_bbd",        "display_name": "SLED/BBD",            "type": "DateOnly"}
+    ],
+    "include_common": true,
+    "alternate_keys": [
+        {"name": "ak_nsp_lx09_rowkey", "display_name": "Row Key Key", "columns": ["nsp_rowkey"]}
+    ],
+    "rowkey": {
+        "strategy": "storage_unit_with_fallback",
+        "primary_column": "nsp_storage_unit",
+        "fallback_prefix": "M-",
+        "fallback_columns": ["nsp_material", "nsp_batch"],
+        "fallback_separator": "|",
+        "max_length": 200
+    }
+}

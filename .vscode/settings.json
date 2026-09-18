@@ -1,0 +1,10 @@
+{
+    "python.defaultInterpreterPath": "C:\\Users\\NGSoyemiOl\\AppData\\Local\\miniconda3\\envs\\automation\\python.exe",
+    "python.terminal.activateEnvironment": true,
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}\\_Shared\\Pys"
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda"
+}

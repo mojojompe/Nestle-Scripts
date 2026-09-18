@@ -1,0 +1,9 @@
+﻿======================================================================
+SAP GUI PROBE  |  2026-07-26T07:29:20
+======================================================================
+[OK] Attached via SapROTWr.SapROTWrapper
+[..] GetActiveObject path failed: Exception calling "GetActiveObject" with "1" argument(s): "Invalid class string (Exception from HRESULT: 0x800401F3 (CO_E_CLASSSTRING))"
+
+[X] Could not attach to a running SAP GUI scripting engine.
+    -> Make sure SAP is OPEN (via PAD) and scripting is enabled
+       (SAP Logon > Options > Accessibility & Scripting > Scripting).

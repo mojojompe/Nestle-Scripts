@@ -1,0 +1,47 @@
+{
+    "$schema": "table_v1",
+    "_comment": "MB5T Stock in Transit. Overwrite. Plant-level. Rowkey = supplying|receiving|material|batch.",
+    "solution": {"unique_name": "NGSPAutomation", "publisher_prefix": "nsp"},
+    "table": {
+        "logical_name": "nsp_mb5t_stockintransit",
+        "display_name": "MB5T Stock in Transit",
+        "display_collection_name": "MB5T Stock in Transit Records",
+        "description": "SAP MB5T stock in transit snapshot. Overwrite each run.",
+        "ownership": "OrganizationOwned",
+        "primary_column": {
+            "logical_name": "nsp_rowkey",
+            "display_name": "Row Key",
+            "description": "Composite: {supplying_plant}|{plant}|{material}|{batch}.",
+            "max_length": 200,
+            "required": "ApplicationRequired"
+        }
+    },
+    "properties": {
+        "auditing_enabled": false,
+        "change_tracking_enabled": true,
+        "duplicate_detection_enabled": false,
+        "mobile_enabled": false,
+        "offline_enabled": false
+    },
+    "columns": [
+        {"logical_name": "nsp_plant",             "display_name": "Receiving Plant",     "type": "Text", "max_length": 4, "required": "ApplicationRequired"},
+        {"logical_name": "nsp_material",          "display_name": "Material",            "type": "Text", "max_length": 18, "required": "ApplicationRequired"},
+        {"logical_name": "nsp_material_desc",     "display_name": "Material Description","type": "Text", "max_length": 80},
+        {"logical_name": "nsp_batch",             "display_name": "Batch",               "type": "Text", "max_length": 10},
+        {"logical_name": "nsp_storage_location",  "display_name": "Storage Location",    "type": "Text", "max_length": 4},
+        {"logical_name": "nsp_supplying_plant",   "display_name": "Supplying Plant",     "type": "Text", "max_length": 4},
+        {"logical_name": "nsp_stock_in_transit",  "display_name": "Stock in Transit",    "type": "Decimal", "precision": 3, "min_value": -999999999.999, "max_value": 999999999.999},
+        {"logical_name": "nsp_uom",               "display_name": "Base UoM",            "type": "Text", "max_length": 3},
+        {"logical_name": "nsp_value_transit",     "display_name": "Value in Transit",    "type": "Decimal", "precision": 2, "min_value": -999999999.99, "max_value": 999999999.99}
+    ],
+    "include_common": true,
+    "alternate_keys": [
+        {"name": "ak_nsp_mb5t_rowkey", "display_name": "Row Key Key", "columns": ["nsp_rowkey"]}
+    ],
+    "rowkey": {
+        "strategy": "composite",
+        "columns": ["nsp_supplying_plant", "nsp_plant", "nsp_material", "nsp_batch"],
+        "separator": "|",
+        "max_length": 200
+    }
+}

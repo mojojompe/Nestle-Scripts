@@ -1,0 +1,51 @@
+{
+    "$schema": "table_v1",
+    "_comment": "MB51 Material Documents. Append New. Plant-level. Rowkey = doc + item + posting date.",
+    "solution": {"unique_name": "NGSPAutomation", "publisher_prefix": "nsp"},
+    "table": {
+        "logical_name": "nsp_mb51_movements",
+        "display_name": "MB51 Movements",
+        "display_collection_name": "MB51 Movement Records",
+        "description": "SAP MB51 material document movements (2-day window). Append-new (history preserved).",
+        "ownership": "OrganizationOwned",
+        "primary_column": {
+            "logical_name": "nsp_rowkey",
+            "display_name": "Row Key",
+            "description": "Composite: {doc_number}|{doc_item}|{posting_date}.",
+            "max_length": 200,
+            "required": "ApplicationRequired"
+        }
+    },
+    "properties": {
+        "auditing_enabled": false,
+        "change_tracking_enabled": false,
+        "duplicate_detection_enabled": false,
+        "mobile_enabled": false,
+        "offline_enabled": false
+    },
+    "columns": [
+        {"logical_name": "nsp_plant",          "display_name": "Plant",               "type": "Text", "max_length": 4, "required": "ApplicationRequired"},
+        {"logical_name": "nsp_material",       "display_name": "Material",            "type": "Text", "max_length": 18},
+        {"logical_name": "nsp_material_desc",  "display_name": "Material Description","type": "Text", "max_length": 80},
+        {"logical_name": "nsp_movement_type",  "display_name": "Movement Type",       "type": "Text", "max_length": 3},
+        {"logical_name": "nsp_doc_number",     "display_name": "Material Document",   "type": "Text", "max_length": 10, "required": "ApplicationRequired"},
+        {"logical_name": "nsp_doc_item",       "display_name": "Document Item",       "type": "Text", "max_length": 4,  "required": "ApplicationRequired"},
+        {"logical_name": "nsp_posting_date",   "display_name": "Posting Date",        "type": "DateOnly", "required": "ApplicationRequired"},
+        {"logical_name": "nsp_entry_date",     "display_name": "Entry Date",          "type": "DateOnly"},
+        {"logical_name": "nsp_quantity",       "display_name": "Quantity",            "type": "Decimal", "precision": 3, "min_value": -999999999.999, "max_value": 999999999.999},
+        {"logical_name": "nsp_uom",            "display_name": "Base UoM",            "type": "Text", "max_length": 3},
+        {"logical_name": "nsp_storage_location","display_name": "Storage Location",   "type": "Text", "max_length": 4},
+        {"logical_name": "nsp_batch",          "display_name": "Batch",               "type": "Text", "max_length": 10},
+        {"logical_name": "nsp_amount_lc",      "display_name": "Amount in LC",        "type": "Decimal", "precision": 2, "min_value": -999999999.99, "max_value": 999999999.99}
+    ],
+    "include_common": true,
+    "alternate_keys": [
+        {"name": "ak_nsp_mb51_rowkey", "display_name": "Row Key Key", "columns": ["nsp_rowkey"]}
+    ],
+    "rowkey": {
+        "strategy": "composite",
+        "columns": ["nsp_doc_number", "nsp_doc_item", "nsp_posting_date"],
+        "separator": "|",
+        "max_length": 200
+    }
+}

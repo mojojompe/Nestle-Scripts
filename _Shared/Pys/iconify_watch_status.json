@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-09-04T07:33:09",
+  "processes": [
+    {
+      "name": "saplogon.exe",
+      "pid": 30224,
+      "status": "running",
+      "cpu_percent": 15.9,
+      "memory_mb": 360.8
+    }
+  ],
+  "processes_missing": [
+    "saplgpad.exe",
+    "sapgui.exe",
+    "sapshcut.exe"
+  ],
+  "sessions": [
+    {
+      "conn": 0,
+      "sess": 0,
+      "key": "conn0_sess0",
+      "transaction": "S000",
+      "program": "SAPMSDYP",
+      "user": "NGSOYEMIOL",
+      "system": "O9A"
+    }
+  ],
+  "session_count": 1
+}

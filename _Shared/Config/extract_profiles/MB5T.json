@@ -1,0 +1,29 @@
+{
+    "$schema": "extract_profile_v1",
+    "_comment": "MB5T Stock in Transit. Plant-level, OVERWRITE snapshot. Field IDs SAP-standard best-effort -- validate when testing.",
+    "tcode": "/nMB5T",
+    "exec_timeout": 180,
+    "selection_fields": [
+        {"id": "wnd[0]/usr/ctxtWERKS-LOW", "source": "plant"}
+    ],
+    "pre_export_nav": ["wnd[0]/mbar/menu[2]/menu[0]"],
+    "menu_path":      ["wnd[0]/mbar/menu[0]/menu[1]/menu[1]"] ,
+    "menu_step_delay": 1,
+    "date_fields": null,
+    "column_map": {
+        "Plant": "nsp_plant",
+        "Material": "nsp_material",
+        "Material Description": "nsp_material_desc",
+        "Batch": "nsp_batch",
+        "Storage Location": "nsp_storage_location",
+        "Supplying Plant": "nsp_supplying_plant",
+        "Stock in Transit": "nsp_stock_in_transit",
+        "Base Unit of Measure": "nsp_uom",
+        "Value in Transit": "nsp_value_transit"
+    },
+    "force_string_cols": ["Material", "Batch", "Plant", "Supplying Plant",
+                          "Storage Location"],
+    "date_cols": [],
+    "decimal_cols": ["Stock in Transit", "Value in Transit"],
+    "sap_date_fmt": "%d.%m.%Y"
+}

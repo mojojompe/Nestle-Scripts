@@ -1,0 +1,35 @@
+{
+    "$schema": "transaction_scope_v1",
+    "_comment": "Declares which plants/warehouses each transaction extracts. Warehouse codes come from warehouses.json; plant codes from plants.json. Each resolved 'unit' = one SAP session = one parallel worker.",
+
+    "scopes": {
+        "LX02": {
+            "level": "warehouse",
+            "plants": "all",
+            "_comment": "All warehouses in all plants -> 6 sessions (4981:AZ8,AQC | 1478:H51,H53 | 6797:HAA | 1477:447)."
+        },
+        "LT23": {
+            "level": "warehouse",
+            "plants": "all",
+            "_comment": "Same 6 warehouses as LX02 -> 6 sessions."
+        },
+        "LX09": {
+            "level": "warehouse",
+            "include": [
+                {"plant": "4981", "warehouse": "AZ8"},
+                {"plant": "1478", "warehouse": "H51"}
+            ],
+            "_comment": "Subset -> 2 sessions."
+        },
+        "MB51": {
+            "level": "plant",
+            "plants": "all",
+            "_comment": "All 4 plants -> 4 sessions."
+        },
+        "MB5T": {
+            "level": "plant",
+            "plants": "all",
+            "_comment": "All 4 plants -> 4 sessions."
+        }
+    }
+}
