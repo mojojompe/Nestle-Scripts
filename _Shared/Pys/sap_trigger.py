@@ -56,13 +56,17 @@ def trigger_sap(
     # 2) Wait until the scripting engine is actually registered (fixes MK_E_SYNTAX)
     application = _get_scripting_engine(timeout=timeout)
 
-    # 3) Open the connection by its Logon Pad description
-    connection = application.OpenConnection(sap_logon_name, True)
+    # 3) Open asynchronously so a multiple-logon dialog can be handled by COM.
+    connection = application.OpenConnection(sap_logon_name, False)
 
     # 4) Wait for the session to be created (poll instead of a blind sleep)
     deadline = time.time() + 15
     while connection.Children.Count == 0 and time.time() < deadline:
         time.sleep(0.25)
+
+    if connection.Children.Count:
+        from sap_session import handle_multi_logon_popup
+        handle_multi_logon_popup(connection.Children(0), timeout=10)
 
     print("SAP Connection by SAP_Trigger")
     return connection.Children(0)

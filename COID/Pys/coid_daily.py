@@ -14,13 +14,21 @@ from production_report import build_report  # noqa: E402
 
 
 def main() -> int:
-    logging.getLogger("COID_DAILY").info("Starting daily COID run")
-    clean_file = run(dry_run=False)
-    if clean_file is None:
-        raise RuntimeError("COID did not produce a clean file")
-    report = build_report(clean_file)
-    print(f"COID daily workbook: {report}")
-    return 0
+    log = logging.getLogger("COID_DAILY")
+    log.info("STEP daily workflow start")
+    try:
+        log.info("STEP extract and normalize COID")
+        clean_file = run(dry_run=False)
+        if clean_file is None:
+            raise RuntimeError("COID did not produce a clean file")
+        log.info("STEP build Excel report from %s", clean_file)
+        report = build_report(clean_file)
+        log.info("STEP daily workflow complete: %s", report)
+        print(f"COID daily workbook: {report}")
+        return 0
+    except Exception:
+        log.exception("Daily COID workflow failed")
+        raise
 
 
 if __name__ == "__main__":

@@ -1,0 +1,128 @@
+﻿id,type,name,text,tooltip,selected,changeable
+/app/con[1]/ses[1]/wnd[0],GuiMainWindow,wnd[0],SAP Easy Access  -  User Menu for Emmanuel Jompe O9A (2),,,True
+/app/con[1]/ses[1]/wnd[0]/mbar,GuiMenubar,mbar,,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[0],GuiMenu,Menu,Menu,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[0],GuiMenu,User Menu,User Menu,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[1],GuiMenu,SAP Menu,SAP Menu,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[2],GuiMenu,menu[2],,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[3],GuiMenu,Business Workplace,Business Workplace,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[4],GuiMenu,menu[4],,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[5],GuiMenu,Refresh,Refresh,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[1],GuiMenu,Edit,Edit,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[1]/menu[0],GuiMenu,Execute,Execute,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[1]/menu[1],GuiMenu,Execute in New Window,Execute in New Window,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[1]/menu[2],GuiMenu,menu[2],,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[1]/menu[3],GuiMenu,Create Shortcut on Desktop,Create Shortcut on Desktop,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[2],GuiMenu,Favorites,Favorites,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[0],GuiMenu,Add,Add,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[1],GuiMenu,Change,Change,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[2],GuiMenu,menu[2],,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[3],GuiMenu,Delete,Delete,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[4],GuiMenu,menu[4],,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[5],GuiMenu,Insert Folder,Insert Folder,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[6],GuiMenu,Insert Transaction,Insert Transaction,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[7],GuiMenu,Add Other Objects,Add Other Objects,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[8],GuiMenu,menu[8],,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[9],GuiMenu,Download to PC,Download to PC,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[10],GuiMenu,Upload from PC,Upload from PC,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[3],GuiMenu,Extras,Extras,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[3]/menu[0],GuiMenu,Display Documentation,Display Documentation,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[3]/menu[1],GuiMenu,Technical Details,Technical Details,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[3]/menu[2],GuiMenu,menu[2],,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[3]/menu[3],GuiMenu,Settings,Settings,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[3]/menu[4],GuiMenu,Set Start Transaction,Set Start Transaction,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4],GuiMenu,System,System,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[0],GuiMenu,New GUI Window,New GUI Window,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[1],GuiMenu,Close GUI Window,Close GUI Window,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[2],GuiMenu,User Profile,User Profile,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[2]/menu[0],GuiMenu,Hold Data,Hold Data,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[2]/menu[1],GuiMenu,Set Data,Set Data,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[2]/menu[2],GuiMenu,Delete Data,Delete Data,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[2]/menu[3],GuiMenu,User Data,User Data,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[2]/menu[4],GuiMenu,Expand Favorites,Expand Favorites,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3],GuiMenu,Services,Services,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[0],GuiMenu,Reporting,Reporting,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[1],GuiMenu,QuickViewer,QuickViewer,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[2],GuiMenu,Output Control,Output Control,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[3],GuiMenu,Table Maintenance,Table Maintenance,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[3]/menu[0],GuiMenu,Extended Table Maintenance,Extended Table Maintenance,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[3]/menu[1],GuiMenu,View Cluster Maintenance,View Cluster Maintenance,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4],GuiMenu,Batch Input,Batch Input,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[0],GuiMenu,Sessions,Sessions,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[1],GuiMenu,Logs,Logs,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[2],GuiMenu,Recorder,Recorder,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[3],GuiMenu,Restart Transaction,Restart Transaction,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[4],GuiMenu,Delete Transaction,Delete Transaction,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[5],GuiMenu,Next Transaction,Next Transaction,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[6],GuiMenu,Process in Foreground,Process in Foreground,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[7],GuiMenu,Display Errors Only,Display Errors Only,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[8],GuiMenu,Expert Mode On,Expert Mode On,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[9],GuiMenu,Expert Mode Off,Expert Mode Off,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[10],GuiMenu,Cancel,Cancel,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[5],GuiMenu,Fast Entry,Fast Entry,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[5]/menu[0],GuiMenu,Recorder,Recorder,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[5]/menu[1],GuiMenu,Process in Foreground,Process in Foreground,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[5]/menu[2],GuiMenu,Display Errors Only,Display Errors Only,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[5]/menu[3],GuiMenu,Cancel,Cancel,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[6],GuiMenu,Direct Input,Direct Input,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[7],GuiMenu,Jobs,Jobs,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[7]/menu[0],GuiMenu,Define Job,Define Job,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[7]/menu[1],GuiMenu,Job Overview,Job Overview,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[8],GuiMenu,Queue,Queue,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4],GuiMenu,Utilities,Utilities,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[0],GuiMenu,Debug Dynpro,Debug Dynpro,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[1],GuiMenu,Debug ABAP,Debug ABAP,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[2],GuiMenu,Debug System,Debug System,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[3],GuiMenu,Resource Usage,Resource Usage,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[4],GuiMenu,Autom. Queue: Synchronous Processing,Autom. Queue: Synchronous Processing,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[5],GuiMenu,Performance Trace,Performance Trace,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[6],GuiMenu,Context Trace,Context Trace,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[7],GuiMenu,Runtime Analysis,Runtime Analysis,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[7]/menu[0],GuiMenu,Execute,Execute,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[7]/menu[1],GuiMenu,Switch On,Switch On,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[7]/menu[2],GuiMenu,Switch Off,Switch Off,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[8],GuiMenu,Display Authorization Check,Display Authorization Check,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[9],GuiMenu,Memory Analysis,Memory Analysis,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[9]/menu[0],GuiMenu,Create Memory Snapshot,Create Memory Snapshot,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[9]/menu[1],GuiMenu,Compare Memory Snapshots,Compare Memory Snapshots,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[5],GuiMenu,Services for Object,Services for Object,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[6],GuiMenu,My Objects,My Objects,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[6]/menu[0],GuiMenu,Object History,Object History,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[6]/menu[1],GuiMenu,Edit Objects,Edit Objects,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[7],GuiMenu,Own Spool Requests,Own Spool Requests,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[8],GuiMenu,Own Jobs,Own Jobs,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[9],GuiMenu,Short Message,Short Message,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[10],GuiMenu,Status...,Status...,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[11],GuiMenu,Log Off,Log Off,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[5],GuiMenu,Help,Help,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[0],GuiMenu,Product Assistance,Product Assistance,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[1],GuiMenu,SAP Help Portal,SAP Help Portal,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[2],GuiMenu,menu[2],,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[3],GuiMenu,SAP Support Portal,SAP Support Portal,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[4],GuiMenu,Create Support Message,Create Support Message,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[5],GuiMenu,menu[5],,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[6],GuiMenu,Settings...,Settings...,,,True
+/app/con[1]/ses[1]/wnd[0]/tbar[0],GuiToolbar,tbar[0],,,,True
+/app/con[1]/ses[1]/wnd[0]/tbar[0]/btn[0],GuiButton,btn[0],Execute,Execute   (Enter),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[0]/btn[15],GuiButton,btn[15],Exit,Log Off   (Shift+F3),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[0]/btn[86],GuiButton,btn[86],,Print   (Ctrl+P),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[0]/btn[71],GuiButton,btn[71],,Find   (Ctrl+F),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[0]/btn[84],GuiButton,btn[84],,Find Next   (Ctrl+G),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[0]/okcd,GuiOkCodeField,okcd,,,,True
+/app/con[1]/ses[1]/wnd[0]/titl,GuiTitlebar,titl,SAP Easy Access  -  User Menu for Emmanuel Jompe,,,
+/app/con[1]/ses[1]/wnd[0]/tbar[1],GuiToolbar,tbar[1],,,,True
+/app/con[1]/ses[1]/wnd[0]/tbar[1]/btnvhmore,GuiButton,btnvhmore,More,More (Alt+F12),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[1]/btn[34],GuiButton,btn[34],,User Menu   (Ctrl+F10),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[1]/btn[35],GuiButton,btn[35],,SAP Menu   (Ctrl+F11),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[1]/btn[36],GuiButton,btn[36],,SAP Business Workplace   (Ctrl+F12),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[1]/btn[42],GuiButton,btn[42],,Add to favorites   (Ctrl+Shift+F6),,True
+/app/con[1]/ses[1]/wnd[0]/usr,GuiUserArea,usr,,,,True
+/app/con[1]/ses[1]/wnd[0]/usr/cntlIMAGE_CONTAINER,GuiCustomControl,IMAGE_CONTAINER,,,,True
+/app/con[1]/ses[1]/wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont,GuiContainerShell,shellcont,SAPGUI.CONTAINERCTRL.1,,,True
+/app/con[1]/ses[1]/wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell,GuiSplitterShell,shell,SAPGUI.SplitterCtrl.1,,,True
+/app/con[1]/ses[1]/wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[0],GuiContainerShell,shellcont[0],SAPGUI.CONTAINERCTRL.1,,,True
+/app/con[1]/ses[1]/wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[0]/shell,GuiShell,shell,SAP.TableTreeControl.1,,,True
+/app/con[1]/ses[1]/wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[1],GuiContainerShell,shellcont[1],SAPGUI.CONTAINERCTRL.1,,,True
+/app/con[1]/ses[1]/wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[1]/shell,GuiShell,shell,SAPGUI.ImageCtrl.1,,,True
+/app/con[1]/ses[1]/wnd[0]/sbar,GuiStatusbar,sbar,,,,False
+/app/con[1]/ses[1]/wnd[0]/sbar/pane[0],GuiStatusPane,pane[0],,,,False

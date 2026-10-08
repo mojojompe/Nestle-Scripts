@@ -1,0 +1,158 @@
+﻿id,type,name,text,tooltip,selected,changeable
+/app/con[1]/ses[1]/wnd[0],GuiMainWindow,wnd[0],Order Information System: Detail List of Order Headers,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar,GuiMenubar,mbar,,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[0],GuiMenu,List,List,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[0],GuiMenu,Refresh,Refresh,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[1],GuiMenu,Read,Read,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[1]/menu[0],GuiMenu,All Objects,All Objects,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[1]/menu[1],GuiMenu,Selected Objects,Selected Objects,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[2],GuiMenu,Number of Entries,Number of Entries,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[3],GuiMenu,menu[3],,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[4],GuiMenu,Exit,Exit,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[1],GuiMenu,Edit,Edit,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[1]/menu[0],GuiMenu,Cancel,Cancel,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[2],GuiMenu,Goto,Goto,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[0],GuiMenu,Back,Back,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[3],GuiMenu,Settings,Settings,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[3]/menu[0],GuiMenu,Set Filter,Set Filter,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[3]/menu[0]/menu[0],GuiMenu,Status Filter...,Status Filter...,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[3]/menu[0]/menu[1],GuiMenu,User Filter...,User Filter...,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[3]/menu[1],GuiMenu,Delete Filter,Delete Filter,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[3]/menu[1]/menu[0],GuiMenu,Status Filter,Status Filter,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[3]/menu[1]/menu[1],GuiMenu,User Filter,User Filter,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[3]/menu[2],GuiMenu,menu[2],,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[3]/menu[3],GuiMenu,Get Profile,Get Profile,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[3]/menu[4],GuiMenu,Color Legend,Color Legend,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4],GuiMenu,Environment,Environment,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[0],GuiMenu,Display Order,Display Order,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[0]/menu[0],GuiMenu,Header,Header,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[0]/menu[1],GuiMenu,Operations,Operations,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[0]/menu[2],GuiMenu,Components,Components,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[0]/menu[3],GuiMenu,menu[3],,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[0]/menu[4],GuiMenu,Logs,Logs,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[0]/menu[5],GuiMenu,menu[5],,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[0]/menu[6],GuiMenu,Long Text,Long Text,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[0]/menu[7],GuiMenu,Individual Status,Individual Status,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[0]/menu[8],GuiMenu,CO Data,CO Data,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[0]/menu[9],GuiMenu,Configuration,Configuration,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[1],GuiMenu,Change Order,Change Order,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[1]/menu[0],GuiMenu,Header,Header,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[1]/menu[1],GuiMenu,Operations,Operations,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[1]/menu[2],GuiMenu,Components,Components,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[2],GuiMenu,menu[2],,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3],GuiMenu,Display Confirmation,Display Confirmation,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4],GuiMenu,Cancel Confirmation,Cancel Confirmation,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[5],GuiMenu,menu[5],,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[6],GuiMenu,Display Object,Display Object,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[7],GuiMenu,Change Object,Change Object,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[8],GuiMenu,menu[8],,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[9],GuiMenu,Stock/Requirements List,Stock/Requirements List,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[10],GuiMenu,Stock Overview,Stock Overview,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[11],GuiMenu,Backorder Processing,Backorder Processing,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[12],GuiMenu,Availability Overview,Availability Overview,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[5],GuiMenu,Mass Processing,Mass Processing,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[0],GuiMenu,Settings,Settings,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[1],GuiMenu,Execute,Execute,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[2],GuiMenu,menu[2],,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[3],GuiMenu,Log of Last MP,Log of Last MP,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6],GuiMenu,System,System,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[0],GuiMenu,New GUI Window,New GUI Window,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[1],GuiMenu,Close GUI Window,Close GUI Window,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[2],GuiMenu,User Profile,User Profile,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[2]/menu[0],GuiMenu,Hold Data,Hold Data,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[2]/menu[1],GuiMenu,Set Data,Set Data,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[2]/menu[2],GuiMenu,Delete Data,Delete Data,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[2]/menu[3],GuiMenu,User Data,User Data,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[2]/menu[4],GuiMenu,Expand Favorites,Expand Favorites,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3],GuiMenu,Services,Services,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[0],GuiMenu,Reporting,Reporting,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[1],GuiMenu,QuickViewer,QuickViewer,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[2],GuiMenu,Output Control,Output Control,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[3],GuiMenu,Table Maintenance,Table Maintenance,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[3]/menu[0],GuiMenu,Extended Table Maintenance,Extended Table Maintenance,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[3]/menu[1],GuiMenu,View Cluster Maintenance,View Cluster Maintenance,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[4],GuiMenu,Batch Input,Batch Input,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[4]/menu[0],GuiMenu,Sessions,Sessions,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[4]/menu[1],GuiMenu,Logs,Logs,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[4]/menu[2],GuiMenu,Recorder,Recorder,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[4]/menu[3],GuiMenu,Restart Transaction,Restart Transaction,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[4]/menu[4],GuiMenu,Delete Transaction,Delete Transaction,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[4]/menu[5],GuiMenu,Next Transaction,Next Transaction,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[4]/menu[6],GuiMenu,Process in Foreground,Process in Foreground,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[4]/menu[7],GuiMenu,Display Errors Only,Display Errors Only,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[4]/menu[8],GuiMenu,Expert Mode On,Expert Mode On,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[4]/menu[9],GuiMenu,Expert Mode Off,Expert Mode Off,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[4]/menu[10],GuiMenu,Cancel,Cancel,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[5],GuiMenu,Fast Entry,Fast Entry,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[5]/menu[0],GuiMenu,Recorder,Recorder,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[5]/menu[1],GuiMenu,Process in Foreground,Process in Foreground,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[5]/menu[2],GuiMenu,Display Errors Only,Display Errors Only,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[5]/menu[3],GuiMenu,Cancel,Cancel,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[6],GuiMenu,Direct Input,Direct Input,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[7],GuiMenu,Jobs,Jobs,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[7]/menu[0],GuiMenu,Define Job,Define Job,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[7]/menu[1],GuiMenu,Job Overview,Job Overview,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[3]/menu[8],GuiMenu,Queue,Queue,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[4],GuiMenu,Utilities,Utilities,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[4]/menu[0],GuiMenu,Debug Dynpro,Debug Dynpro,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[4]/menu[1],GuiMenu,Debug ABAP,Debug ABAP,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[4]/menu[2],GuiMenu,Debug System,Debug System,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[4]/menu[3],GuiMenu,Resource Usage,Resource Usage,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[4]/menu[4],GuiMenu,Autom. Queue: Synchronous Processing,Autom. Queue: Synchronous Processing,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[4]/menu[5],GuiMenu,Performance Trace,Performance Trace,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[4]/menu[6],GuiMenu,Context Trace,Context Trace,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[4]/menu[7],GuiMenu,Runtime Analysis,Runtime Analysis,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[4]/menu[7]/menu[0],GuiMenu,Execute,Execute,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[4]/menu[7]/menu[1],GuiMenu,Switch On,Switch On,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[4]/menu[7]/menu[2],GuiMenu,Switch Off,Switch Off,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[4]/menu[8],GuiMenu,Display Authorization Check,Display Authorization Check,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[4]/menu[9],GuiMenu,Memory Analysis,Memory Analysis,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[4]/menu[9]/menu[0],GuiMenu,Create Memory Snapshot,Create Memory Snapshot,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[4]/menu[9]/menu[1],GuiMenu,Compare Memory Snapshots,Compare Memory Snapshots,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[5],GuiMenu,Services for Object,Services for Object,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[6],GuiMenu,My Objects,My Objects,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[6]/menu[0],GuiMenu,Object History,Object History,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[6]/menu[1],GuiMenu,Edit Objects,Edit Objects,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[7],GuiMenu,Own Spool Requests,Own Spool Requests,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[8],GuiMenu,Own Jobs,Own Jobs,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[9],GuiMenu,Short Message,Short Message,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[10],GuiMenu,Status...,Status...,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[6]/menu[11],GuiMenu,Log Off,Log Off,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[7],GuiMenu,Help,Help,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[7]/menu[0],GuiMenu,Product Assistance,Product Assistance,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[7]/menu[1],GuiMenu,SAP Help Portal,SAP Help Portal,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[7]/menu[2],GuiMenu,menu[2],,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[7]/menu[3],GuiMenu,SAP Support Portal,SAP Support Portal,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[7]/menu[4],GuiMenu,Create Support Message,Create Support Message,,,True
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[7]/menu[5],GuiMenu,menu[5],,,,False
+/app/con[1]/ses[1]/wnd[0]/mbar/menu[7]/menu[6],GuiMenu,Settings...,Settings...,,,True
+/app/con[1]/ses[1]/wnd[0]/tbar[0],GuiToolbar,tbar[0],,,,True
+/app/con[1]/ses[1]/wnd[0]/tbar[0]/btn[11],GuiButton,btn[11],Save,Save   (Ctrl+S),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[0]/btn[3],GuiButton,btn[3],Back,Back   (F3),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[0]/btn[15],GuiButton,btn[15],Exit,Exit   (Shift+F3),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[0]/btn[86],GuiButton,btn[86],,Print   (Ctrl+P),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[0]/btn[71],GuiButton,btn[71],,Find   (Ctrl+F),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[0]/btn[84],GuiButton,btn[84],,Find Next   (Ctrl+G),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[0]/okcd,GuiOkCodeField,okcd,,,,True
+/app/con[1]/ses[1]/wnd[0]/titl,GuiTitlebar,titl,Order Information System: Detail List of Order Headers,,,
+/app/con[1]/ses[1]/wnd[0]/titl/shellcont,GuiGOSShell,shellcont,SAPGUI.GOSCONTAINERCTRL.1,,,True
+/app/con[1]/ses[1]/wnd[0]/titl/shellcont/shell,GuiShell,shell,SAP.Toolbar.1,,,True
+/app/con[1]/ses[1]/wnd[0]/tbar[1],GuiToolbar,tbar[1],,,,True
+/app/con[1]/ses[1]/wnd[0]/tbar[1]/btnvhmore,GuiButton,btnvhmore,More,More (Alt+F12),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[1]/btn[8],GuiButton,btn[8],Execute,Execute Mass Processing   (F8),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[1]/btn[5],GuiButton,btn[5],,Refresh   (F5),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[1]/btn[18],GuiButton,btn[18],,Change Object   (Shift+F6),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[1]/btn[19],GuiButton,btn[19],,Display Object   (Shift+F7),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[1]/btn[29],GuiButton,btn[29],,Individual Status   (Ctrl+F5),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[1]/btn[21],GuiButton,btn[21],,Long Text   (Shift+F9),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[1]/btn[25],GuiButton,btn[25],Change Order,Change Header   (Ctrl+F1),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[1]/btn[26],GuiButton,btn[26],Display Order,Display Header   (Ctrl+F2),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[1]/btn[33],GuiButton,btn[33],Display Operations,Display Order Operations   (Ctrl+F9),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[1]/btn[35],GuiButton,btn[35],Display Components,Display Order Components   (Ctrl+F11),,True
+/app/con[1]/ses[1]/wnd[0]/tbar[1]/btn[28],GuiButton,btn[28],Logs for Order,Logs for Order   (Ctrl+F4),,True
+/app/con[1]/ses[1]/wnd[0]/usr,GuiUserArea,usr,,,,True
+/app/con[1]/ses[1]/wnd[0]/usr/cntlGRID_0100,GuiCustomControl,GRID_0100,,,,True
+/app/con[1]/ses[1]/wnd[0]/usr/cntlGRID_0100/shellcont,GuiContainerShell,shellcont,SAPGUI.CONTAINERCTRL.1,,,True
+/app/con[1]/ses[1]/wnd[0]/usr/cntlGRID_0100/shellcont/shell,GuiShell,shell,SAPGUI.GridViewCtrl.1,,,True
+/app/con[1]/ses[1]/wnd[0]/sbar,GuiStatusbar,sbar,,,,False
+/app/con[1]/ses[1]/wnd[0]/sbar/pane[0],GuiStatusPane,pane[0],,,,False

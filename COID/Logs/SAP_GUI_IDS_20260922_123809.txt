@@ -1,0 +1,332 @@
+id=/app/con[1]/ses[1]/wnd[0] | type=GuiMainWindow | name=wnd[0] | text=Order Info System: Detail List Report for Order Headers | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar | type=GuiMenubar | name=mbar | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[0] | type=GuiMenu | name=Program | text=Program | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[0] | type=GuiMenu | name=Execute | text=Execute | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[1] | type=GuiMenu | name=Execute and Print | text=Execute and Print | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[2] | type=GuiMenu | name=Execute in Background | text=Execute in Background | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[3] | type=GuiMenu | name=menu[3] | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[4] | type=GuiMenu | name=Exit | text=Exit | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[1] | type=GuiMenu | name=Edit | text=Edit | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[1]/menu[0] | type=GuiMenu | name=All Selections | text=All Selections | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[1]/menu[1] | type=GuiMenu | name=Chosen Selections | text=Chosen Selections | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[1]/menu[2] | type=GuiMenu | name=menu[2] | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[1]/menu[3] | type=GuiMenu | name=Selection Options | text=Selection Options | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[1]/menu[4] | type=GuiMenu | name=menu[4] | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[1]/menu[5] | type=GuiMenu | name=Delete Selection Row | text=Delete Selection Row | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[1]/menu[6] | type=GuiMenu | name=Delete All Selections | text=Delete All Selections | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[1]/menu[7] | type=GuiMenu | name=menu[7] | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[1]/menu[8] | type=GuiMenu | name=Dynamic Selections | text=Dynamic Selections | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[1]/menu[9] | type=GuiMenu | name=menu[9] | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[1]/menu[10] | type=GuiMenu | name=Cancel | text=Cancel | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2] | type=GuiMenu | name=Goto | text=Goto | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[0] | type=GuiMenu | name=Variants | text=Variants | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[0]/menu[0] | type=GuiMenu | name=Get... | text=Get... | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[0]/menu[1] | type=GuiMenu | name=Display... | text=Display... | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[0]/menu[2] | type=GuiMenu | name=Delete... | text=Delete... | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[0]/menu[3] | type=GuiMenu | name=Save as Variant... | text=Save as Variant... | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[1] | type=GuiMenu | name=menu[1] | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[2] | type=GuiMenu | name=User Variables... | text=User Variables... | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[3] | type=GuiMenu | name=menu[3] | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[4] | type=GuiMenu | name=Selection Screen Help | text=Selection Screen Help | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[5] | type=GuiMenu | name=menu[5] | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[6] | type=GuiMenu | name=Back | text=Back | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[3] | type=GuiMenu | name=Mass Processing | text=Mass Processing | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[3]/menu[0] | type=GuiMenu | name=Settings... | text=Settings... | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4] | type=GuiMenu | name=System | text=System | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[0] | type=GuiMenu | name=New GUI Window | text=New GUI Window | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[1] | type=GuiMenu | name=Close GUI Window | text=Close GUI Window | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[2] | type=GuiMenu | name=User Profile | text=User Profile | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[2]/menu[0] | type=GuiMenu | name=Hold Data | text=Hold Data | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[2]/menu[1] | type=GuiMenu | name=Set Data | text=Set Data | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[2]/menu[2] | type=GuiMenu | name=Delete Data | text=Delete Data | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[2]/menu[3] | type=GuiMenu | name=User Data | text=User Data | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[2]/menu[4] | type=GuiMenu | name=Expand Favorites | text=Expand Favorites | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3] | type=GuiMenu | name=Services | text=Services | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[0] | type=GuiMenu | name=Reporting | text=Reporting | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[1] | type=GuiMenu | name=QuickViewer | text=QuickViewer | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[2] | type=GuiMenu | name=Output Control | text=Output Control | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[3] | type=GuiMenu | name=Table Maintenance | text=Table Maintenance | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[3]/menu[0] | type=GuiMenu | name=Extended Table Maintenance | text=Extended Table Maintenance | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[3]/menu[1] | type=GuiMenu | name=View Cluster Maintenance | text=View Cluster Maintenance | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4] | type=GuiMenu | name=Batch Input | text=Batch Input | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[0] | type=GuiMenu | name=Sessions | text=Sessions | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[1] | type=GuiMenu | name=Logs | text=Logs | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[2] | type=GuiMenu | name=Recorder | text=Recorder | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[3] | type=GuiMenu | name=Restart Transaction | text=Restart Transaction | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[4] | type=GuiMenu | name=Delete Transaction | text=Delete Transaction | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[5] | type=GuiMenu | name=Next Transaction | text=Next Transaction | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[6] | type=GuiMenu | name=Process in Foreground | text=Process in Foreground | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[7] | type=GuiMenu | name=Display Errors Only | text=Display Errors Only | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[8] | type=GuiMenu | name=Expert Mode On | text=Expert Mode On | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[9] | type=GuiMenu | name=Expert Mode Off | text=Expert Mode Off | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[10] | type=GuiMenu | name=Cancel | text=Cancel | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[5] | type=GuiMenu | name=Fast Entry | text=Fast Entry | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[5]/menu[0] | type=GuiMenu | name=Recorder | text=Recorder | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[5]/menu[1] | type=GuiMenu | name=Process in Foreground | text=Process in Foreground | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[5]/menu[2] | type=GuiMenu | name=Display Errors Only | text=Display Errors Only | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[5]/menu[3] | type=GuiMenu | name=Cancel | text=Cancel | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[6] | type=GuiMenu | name=Direct Input | text=Direct Input | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[7] | type=GuiMenu | name=Jobs | text=Jobs | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[7]/menu[0] | type=GuiMenu | name=Define Job | text=Define Job | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[7]/menu[1] | type=GuiMenu | name=Job Overview | text=Job Overview | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[8] | type=GuiMenu | name=Queue | text=Queue | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4] | type=GuiMenu | name=Utilities | text=Utilities | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[0] | type=GuiMenu | name=Debug Dynpro | text=Debug Dynpro | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[1] | type=GuiMenu | name=Debug ABAP | text=Debug ABAP | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[2] | type=GuiMenu | name=Debug System | text=Debug System | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[3] | type=GuiMenu | name=Resource Usage | text=Resource Usage | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[4] | type=GuiMenu | name=Autom. Queue: Synchronous Processing | text=Autom. Queue: Synchronous Processing | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[5] | type=GuiMenu | name=Performance Trace | text=Performance Trace | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[6] | type=GuiMenu | name=Context Trace | text=Context Trace | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[7] | type=GuiMenu | name=Runtime Analysis | text=Runtime Analysis | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[7]/menu[0] | type=GuiMenu | name=Execute | text=Execute | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[7]/menu[1] | type=GuiMenu | name=Switch On | text=Switch On | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[7]/menu[2] | type=GuiMenu | name=Switch Off | text=Switch Off | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[8] | type=GuiMenu | name=Display Authorization Check | text=Display Authorization Check | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[9] | type=GuiMenu | name=Memory Analysis | text=Memory Analysis | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[9]/menu[0] | type=GuiMenu | name=Create Memory Snapshot | text=Create Memory Snapshot | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[9]/menu[1] | type=GuiMenu | name=Compare Memory Snapshots | text=Compare Memory Snapshots | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[5] | type=GuiMenu | name=Services for Object | text=Services for Object | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[6] | type=GuiMenu | name=My Objects | text=My Objects | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[6]/menu[0] | type=GuiMenu | name=Object History | text=Object History | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[6]/menu[1] | type=GuiMenu | name=Edit Objects | text=Edit Objects | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[7] | type=GuiMenu | name=Own Spool Requests | text=Own Spool Requests | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[8] | type=GuiMenu | name=Own Jobs | text=Own Jobs | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[9] | type=GuiMenu | name=Short Message | text=Short Message | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[10] | type=GuiMenu | name=Status... | text=Status... | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[11] | type=GuiMenu | name=Log Off | text=Log Off | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[5] | type=GuiMenu | name=Help | text=Help | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[0] | type=GuiMenu | name=Product Assistance | text=Product Assistance | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[1] | type=GuiMenu | name=SAP Help Portal | text=SAP Help Portal | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[2] | type=GuiMenu | name=menu[2] | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[3] | type=GuiMenu | name=SAP Support Portal | text=SAP Support Portal | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[4] | type=GuiMenu | name=Create Support Message | text=Create Support Message | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[5] | type=GuiMenu | name=menu[5] | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[6] | type=GuiMenu | name=Settings... | text=Settings... | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/tbar[0] | type=GuiToolbar | name=tbar[0] | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/tbar[0]/btn[11] | type=GuiButton | name=btn[11] | text=Save as Variant... | tooltip=Save as variant   (Ctrl+S) | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/tbar[0]/btn[3] | type=GuiButton | name=btn[3] | text=Back | tooltip=Back   (F3) | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/tbar[0]/btn[15] | type=GuiButton | name=btn[15] | text=Exit | tooltip=Exit   (Shift+F3) | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/tbar[0]/okcd | type=GuiOkCodeField | name=okcd | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/titl | type=GuiTitlebar | name=titl | text=Order Info System: Detail List Report for Order Headers
+id=/app/con[1]/ses[1]/wnd[0]/tbar[1] | type=GuiToolbar | name=tbar[1] | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/tbar[1]/btnvhmore | type=GuiButton | name=btnvhmore | text=More | tooltip=More (Alt+F12) | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/tbar[1]/btn[8] | type=GuiButton | name=btn[8] | text=Execute | tooltip=Execute   (F8) | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/tbar[1]/btn[17] | type=GuiButton | name=btn[17] | tooltip=Get Variant...   (Shift+F5) | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr | type=GuiUserArea | name=usr | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/box%BBL8000_BLOCK_1000 | type=GuiBox | name=%BBL8000_BLOCK_1000 | text=Order Category | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%FAUT002_1000 | type=GuiTextField | name=%FAUT002_1000 | text=Process/Plnd Orders | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtP_AUTFP | type=GuiCTextField | name=P_AUTFP | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtP_AUTXT | type=GuiTextField | name=P_AUTXT | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/box%BBL1009_BLOCK_1000 | type=GuiBox | name=%BBL1009_BLOCK_1000 | text=Prof. | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%FPRF011_1000 | type=GuiTextField | name=%FPRF011_1000 | text=Profile | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtP_PROFID | type=GuiCTextField | name=P_PROFID | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtP_PRFTXT | type=GuiTextField | name=P_PRFTXT | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%FLAY017_1000 | type=GuiTextField | name=%FLAY017_1000 | text=Layout | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtP_LAYOUT | type=GuiCTextField | name=P_LAYOUT | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/box%BSL1022_BLOCK_1000 | type=GuiBox | name=%BSL1022_BLOCK_1000 | text=Select. at Header Level | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_AUFNR_%_APP_%-TEXT | type=GuiTextField | name=%_S_AUFNR_%_APP_%-TEXT | text=Process Order | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_AUFNR-LOW | type=GuiCTextField | name=S_AUFNR-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_AUFNR_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_AUFNR_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_AUFNR-HIGH | type=GuiCTextField | name=S_AUFNR-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_AUFNR_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_AUFNR_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_MATNR_%_APP_%-TEXT | type=GuiTextField | name=%_S_MATNR_%_APP_%-TEXT | text=Material | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_MATNR-LOW | type=GuiCTextField | name=S_MATNR-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_MATNR_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_MATNR_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_MATNR-HIGH | type=GuiCTextField | name=S_MATNR-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_MATNR_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_MATNR_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_WERKS_%_APP_%-TEXT | type=GuiTextField | name=%_S_WERKS_%_APP_%-TEXT | text=Plant | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_WERKS-LOW | type=GuiCTextField | name=S_WERKS-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_WERKS_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_WERKS_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_WERKS-HIGH | type=GuiCTextField | name=S_WERKS-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_WERKS_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_WERKS_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_AUART_%_APP_%-TEXT | type=GuiTextField | name=%_S_AUART_%_APP_%-TEXT | text=Order Type | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_AUART-LOW | type=GuiCTextField | name=S_AUART-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_AUART_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_AUART_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_AUART-HIGH | type=GuiCTextField | name=S_AUART-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_AUART_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_AUART_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_DISPO_%_APP_%-TEXT | type=GuiTextField | name=%_S_DISPO_%_APP_%-TEXT | text=MRP Controller | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_DISPO-LOW | type=GuiCTextField | name=S_DISPO-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_DISPO_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_DISPO_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_DISPO-HIGH | type=GuiCTextField | name=S_DISPO-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_DISPO_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_DISPO_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_FEVOR_%_APP_%-TEXT | type=GuiTextField | name=%_S_FEVOR_%_APP_%-TEXT | text=Production Supervisor | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_FEVOR-LOW | type=GuiCTextField | name=S_FEVOR-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_FEVOR_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_FEVOR_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_FEVOR-HIGH | type=GuiCTextField | name=S_FEVOR-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_FEVOR_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_FEVOR_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_KUNNR_%_APP_%-TEXT | type=GuiTextField | name=%_S_KUNNR_%_APP_%-TEXT | text=Sold-to Party | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_KUNNR-LOW | type=GuiCTextField | name=S_KUNNR-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_KUNNR_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_KUNNR_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_KUNNR-HIGH | type=GuiCTextField | name=S_KUNNR-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_KUNNR_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_KUNNR_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_KDAUF_%_APP_%-TEXT | type=GuiTextField | name=%_S_KDAUF_%_APP_%-TEXT | text=Sales Order | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_KDAUF-LOW | type=GuiCTextField | name=S_KDAUF-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_KDAUF_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_KDAUF_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_KDAUF-HIGH | type=GuiCTextField | name=S_KDAUF-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_KDAUF_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_KDAUF_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_SEQNR_%_APP_%-TEXT | type=GuiTextField | name=%_S_SEQNR_%_APP_%-TEXT | text=Sequence Number | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtS_SEQNR-LOW | type=GuiTextField | name=S_SEQNR-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_SEQNR_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_SEQNR_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtS_SEQNR-HIGH | type=GuiTextField | name=S_SEQNR-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_SEQNR_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_SEQNR_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_APRIO_%_APP_%-TEXT | type=GuiTextField | name=%_S_APRIO_%_APP_%-TEXT | text=Priority | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtS_APRIO-LOW | type=GuiTextField | name=S_APRIO-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_APRIO_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_APRIO_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtS_APRIO-HIGH | type=GuiTextField | name=S_APRIO-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_APRIO_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_APRIO_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_P_SELID_%_APP_%-TEXT | type=GuiTextField | name=%_P_SELID_%_APP_%-TEXT | text=Status Selection Profile | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtP_SELID | type=GuiCTextField | name=P_SELID | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%FSYS039_1000 | type=GuiTextField | name=%FSYS039_1000 | text=Syst. Status | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtP_SYST1 | type=GuiCTextField | name=P_SYST1 | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/chkP_KZ_E1 | type=GuiCheckBox | name=P_KZ_E1 | text=Excl. | selected=False | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%FAND046_1000 | type=GuiTextField | name=%FAND046_1000 | text=and | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtP_SYST2 | type=GuiCTextField | name=P_SYST2 | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/chkP_KZ_E2 | type=GuiCheckBox | name=P_KZ_E2 | text=Excl. | selected=False | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_SCAT_%_APP_%-TEXT | type=GuiTextField | name=%_S_SCAT_%_APP_%-TEXT | text=Stock Segment | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_SCAT-LOW | type=GuiCTextField | name=S_SCAT-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_SCAT_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_SCAT_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_SCAT-HIGH | type=GuiCTextField | name=S_SCAT-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_SCAT_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_SCAT_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/box%BSL2068_BLOCK_1000 | type=GuiBox | name=%BSL2068_BLOCK_1000 | text=Select. at Operation Level | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_ARBPL_%_APP_%-TEXT | type=GuiTextField | name=%_S_ARBPL_%_APP_%-TEXT | text=Resource | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_ARBPL-LOW | type=GuiCTextField | name=S_ARBPL-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_ARBPL_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_ARBPL_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_ARBPL-HIGH | type=GuiCTextField | name=S_ARBPL-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_ARBPL_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_ARBPL_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_OWERK_%_APP_%-TEXT | type=GuiTextField | name=%_S_OWERK_%_APP_%-TEXT | text=Plant | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_OWERK-LOW | type=GuiCTextField | name=S_OWERK-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_OWERK_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_OWERK_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_OWERK-HIGH | type=GuiCTextField | name=S_OWERK-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_OWERK_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_OWERK_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_P_SELOPR_%_APP_%-TEXT | type=GuiTextField | name=%_P_SELOPR_%_APP_%-TEXT | text=Selection Profile | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtP_SELOPR | type=GuiCTextField | name=P_SELOPR | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%FSYS073_1000 | type=GuiTextField | name=%FSYS073_1000 | text=Syst. Status | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtP_SYOP1 | type=GuiCTextField | name=P_SYOP1 | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/chkP_EXOP1 | type=GuiCheckBox | name=P_EXOP1 | text=Excl. | selected=False | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%FAND080_1000 | type=GuiTextField | name=%FAND080_1000 | text=and | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtP_SYOP2 | type=GuiCTextField | name=P_SYOP2 | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/chkP_EXOP2 | type=GuiCheckBox | name=P_EXOP2 | text=Excl. | selected=False | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/box%BSL3089_BLOCK_1000 | type=GuiBox | name=%BSL3089_BLOCK_1000 | text=Selection at Component Level | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_COMPO_%_APP_%-TEXT | type=GuiTextField | name=%_S_COMPO_%_APP_%-TEXT | text=Component | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_COMPO-LOW | type=GuiCTextField | name=S_COMPO-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_COMPO_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_COMPO_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_COMPO-HIGH | type=GuiCTextField | name=S_COMPO-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_COMPO_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_COMPO_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_CWERK_%_APP_%-TEXT | type=GuiTextField | name=%_S_CWERK_%_APP_%-TEXT | text=Plant | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_CWERK-LOW | type=GuiCTextField | name=S_CWERK-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_CWERK_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_CWERK_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_CWERK-HIGH | type=GuiCTextField | name=S_CWERK-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_CWERK_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_CWERK_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_LGORT_%_APP_%-TEXT | type=GuiTextField | name=%_S_LGORT_%_APP_%-TEXT | text=Storage Location | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_LGORT-LOW | type=GuiCTextField | name=S_LGORT-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_LGORT_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_LGORT_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_LGORT-HIGH | type=GuiCTextField | name=S_LGORT-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_LGORT_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_LGORT_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_P_SELCMP_%_APP_%-TEXT | type=GuiTextField | name=%_P_SELCMP_%_APP_%-TEXT | text=Selection Profile | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtP_SELCMP | type=GuiCTextField | name=P_SELCMP | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%FSYS097_1000 | type=GuiTextField | name=%FSYS097_1000 | text=Syst. Status | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtP_SYCP1 | type=GuiCTextField | name=P_SYCP1 | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/chkP_EXCP1 | type=GuiCheckBox | name=P_EXCP1 | text=Excl. | selected=False | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%FAND104_1000 | type=GuiTextField | name=%FAND104_1000 | text=and | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtP_SYCP2 | type=GuiCTextField | name=P_SYCP2 | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/chkP_EXCP2 | type=GuiCheckBox | name=P_EXCP2 | text=Excl. | selected=False | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/box%BSL4113_BLOCK_1000 | type=GuiBox | name=%BSL4113_BLOCK_1000 | text=Options | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/chkP_MSTUF | type=GuiCheckBox | name=P_MSTUF | text=Displ. Compl. Collective Order | selected=False | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/chkP_LOEKZ | type=GuiCheckBox | name=P_LOEKZ | text=With Deletion Flag/Indicator | selected=False | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/chkPA_NMONT | type=GuiCheckBox | name=PA_NMONT | text=No Assembly Orders | selected=False | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/box%BSL5131_BLOCK_1000 | type=GuiBox | name=%BSL5131_BLOCK_1000 | text=Absolute Dates at Header Level | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_ECKST_%_APP_%-TEXT | type=GuiTextField | name=%_S_ECKST_%_APP_%-TEXT | text=Basic start date | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_ECKST-LOW | type=GuiCTextField | name=S_ECKST-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_ECKST_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_ECKST_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_ECKST-HIGH | type=GuiCTextField | name=S_ECKST-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_ECKST_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_ECKST_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_ECKEN_%_APP_%-TEXT | type=GuiTextField | name=%_S_ECKEN_%_APP_%-TEXT | text=Basic Finish Date | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_ECKEN-LOW | type=GuiCTextField | name=S_ECKEN-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_ECKEN_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_ECKEN_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_ECKEN-HIGH | type=GuiCTextField | name=S_ECKEN-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_ECKEN_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_ECKEN_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_TERST_%_APP_%-TEXT | type=GuiTextField | name=%_S_TERST_%_APP_%-TEXT | text=Scheduled Start Date | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_TERST-LOW | type=GuiCTextField | name=S_TERST-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_TERST_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_TERST_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_TERST-HIGH | type=GuiCTextField | name=S_TERST-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_TERST_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_TERST_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_TEREN_%_APP_%-TEXT | type=GuiTextField | name=%_S_TEREN_%_APP_%-TEXT | text=Scheduled Finish Date | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_TEREN-LOW | type=GuiCTextField | name=S_TEREN-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_TEREN_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_TEREN_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_TEREN-HIGH | type=GuiCTextField | name=S_TEREN-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_TEREN_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_TEREN_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_TERFR_%_APP_%-TEXT | type=GuiTextField | name=%_S_TERFR_%_APP_%-TEXT | text=Scheduled Release Date | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_TERFR-LOW | type=GuiCTextField | name=S_TERFR-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_TERFR_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_TERFR_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_TERFR-HIGH | type=GuiCTextField | name=S_TERFR-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_TERFR_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_TERFR_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_ISTST_%_APP_%-TEXT | type=GuiTextField | name=%_S_ISTST_%_APP_%-TEXT | text=Actual Start Date | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_ISTST-LOW | type=GuiCTextField | name=S_ISTST-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_ISTST_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_ISTST_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_ISTST-HIGH | type=GuiCTextField | name=S_ISTST-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_ISTST_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_ISTST_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_ISTEN_%_APP_%-TEXT | type=GuiTextField | name=%_S_ISTEN_%_APP_%-TEXT | text=Actual Finish Date | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_ISTEN-LOW | type=GuiCTextField | name=S_ISTEN-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_ISTEN_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_ISTEN_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_ISTEN-HIGH | type=GuiCTextField | name=S_ISTEN-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_ISTEN_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_ISTEN_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_ISTFR_%_APP_%-TEXT | type=GuiTextField | name=%_S_ISTFR_%_APP_%-TEXT | text=Actual Release Date | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_ISTFR-LOW | type=GuiCTextField | name=S_ISTFR-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_ISTFR_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_ISTFR_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/ctxtS_ISTFR-HIGH | type=GuiCTextField | name=S_ISTFR-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_ISTFR_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_ISTFR_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/box%BSL6142_BLOCK_1000 | type=GuiBox | name=%BSL6142_BLOCK_1000 | text=Relative Dates at Header Level | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_RECKST_%_APP_%-TEXT | type=GuiTextField | name=%_S_RECKST_%_APP_%-TEXT | text=Rel. Basic Start Date | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtS_RECKST-LOW | type=GuiTextField | name=S_RECKST-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_RECKST_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_RECKST_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtS_RECKST-HIGH | type=GuiTextField | name=S_RECKST-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_RECKST_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_RECKST_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_RECKEN_%_APP_%-TEXT | type=GuiTextField | name=%_S_RECKEN_%_APP_%-TEXT | text=Rel. Basic Finish Date | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtS_RECKEN-LOW | type=GuiTextField | name=S_RECKEN-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_RECKEN_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_RECKEN_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtS_RECKEN-HIGH | type=GuiTextField | name=S_RECKEN-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_RECKEN_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_RECKEN_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_RTERST_%_APP_%-TEXT | type=GuiTextField | name=%_S_RTERST_%_APP_%-TEXT | text=Rel. Scheduled Start Date | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtS_RTERST-LOW | type=GuiTextField | name=S_RTERST-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_RTERST_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_RTERST_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtS_RTERST-HIGH | type=GuiTextField | name=S_RTERST-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_RTERST_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_RTERST_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_RTEREN_%_APP_%-TEXT | type=GuiTextField | name=%_S_RTEREN_%_APP_%-TEXT | text=Rel. Scheduled Finish Date | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtS_RTEREN-LOW | type=GuiTextField | name=S_RTEREN-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_RTEREN_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_RTEREN_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtS_RTEREN-HIGH | type=GuiTextField | name=S_RTEREN-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_RTEREN_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_RTEREN_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_RTERFR_%_APP_%-TEXT | type=GuiTextField | name=%_S_RTERFR_%_APP_%-TEXT | text=Rel. Scheduled Release Date | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtS_RTERFR-LOW | type=GuiTextField | name=S_RTERFR-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_RTERFR_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_RTERFR_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtS_RTERFR-HIGH | type=GuiTextField | name=S_RTERFR-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_RTERFR_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_RTERFR_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_RISTST_%_APP_%-TEXT | type=GuiTextField | name=%_S_RISTST_%_APP_%-TEXT | text=Rel. Actual Start Date | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtS_RISTST-LOW | type=GuiTextField | name=S_RISTST-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_RISTST_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_RISTST_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtS_RISTST-HIGH | type=GuiTextField | name=S_RISTST-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_RISTST_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_RISTST_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_RISTEN_%_APP_%-TEXT | type=GuiTextField | name=%_S_RISTEN_%_APP_%-TEXT | text=Rel. Actual Finish Date | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtS_RISTEN-LOW | type=GuiTextField | name=S_RISTEN-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_RISTEN_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_RISTEN_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtS_RISTEN-HIGH | type=GuiTextField | name=S_RISTEN-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_RISTEN_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_RISTEN_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_RISTFR_%_APP_%-TEXT | type=GuiTextField | name=%_S_RISTFR_%_APP_%-TEXT | text=Rel. Actual Release Date | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtS_RISTFR-LOW | type=GuiTextField | name=S_RISTFR-LOW | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/txt%_S_RISTFR_%_APP_%-TO_TEXT | type=GuiTextField | name=%_S_RISTFR_%_APP_%-TO_TEXT | text=to | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/txtS_RISTFR-HIGH | type=GuiTextField | name=S_RISTFR-HIGH | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/btn%_S_RISTFR_%_APP_%-VALU_PUSH | type=GuiButton | name=%_S_RISTFR_%_APP_%-VALU_PUSH | tooltip=Multiple Selection | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/box%BBTC172_BLOCK_1000 | type=GuiBox | name=%BBTC172_BLOCK_1000 | text=Background Processing | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/radP_BTLIST | type=GuiRadioButton | name=P_BTLIST | text=Create list | selected=False | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/radP_BTWBEX | type=GuiRadioButton | name=P_BTWBEX | text=Execute mass processing | selected=False | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/radP_BTAVAI | type=GuiRadioButton | name=P_BTAVAI | text=Check material availability | selected=True | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/box%BBL9177_BLOCK_1000 | type=GuiBox | name=%BBL9177_BLOCK_1000 | text=Availability Check (Background Processing) | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/usr/chkP_AVCL | type=GuiCheckBox | name=P_AVCL | text=Reset Availability | selected=False | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/chkP_AVCK | type=GuiCheckBox | name=P_AVCK | text=Check Avail. | selected=False | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/radP_AVCK_I | type=GuiRadioButton | name=P_AVCK_I | text=Individual | selected=True | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/radP_AVCK_A | type=GuiRadioButton | name=P_AVCK_A | text=ATP Check All | selected=False | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/radP_AVCK_V | type=GuiRadioButton | name=P_AVCK_V | text=Planning Check All | selected=False | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/chkP_AVFIX | type=GuiCheckBox | name=P_AVFIX | text=Firm Planned Orders | selected=False | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/sbar | type=GuiStatusbar | name=sbar | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/sbar/pane[0] | type=GuiStatusPane | name=pane[0] | changeable=False

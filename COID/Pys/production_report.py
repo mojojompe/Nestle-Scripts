@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import logging
 import os
 from datetime import date
 from pathlib import Path
@@ -15,14 +16,17 @@ HERE = Path(__file__).resolve().parent
 COID_DIR = HERE.parent
 EXPORT_DIR = COID_DIR / "Export"
 SHEET_PREFIX = "PlanVSAchvd_"
+LOG = logging.getLogger("COID_REPORT")
 
 
 def build_report(input_path: Path, output_path: Path | None = None) -> Path:
+    LOG.info("STEP report read input: %s", input_path)
     frame = pd.read_csv(input_path, dtype=str, encoding="utf-8-sig", keep_default_na=False)
     required = ["Material", "Material Description", "Basic Start Date", "Delivered Quantity", "Order Type"]
     missing = [column for column in required if column not in frame.columns]
     if missing:
         raise RuntimeError(f"Cannot build report; missing columns: {missing}")
+    LOG.info("Report input validated: rows=%d", len(frame))
     frame["Basic Start Date"] = pd.to_datetime(frame["Basic Start Date"], errors="coerce").dt.strftime("%Y-%m-%d")
     frame["Delivered Quantity"] = pd.to_numeric(frame["Delivered Quantity"], errors="coerce").fillna(0)
     frame["Planned Quantity"] = pd.to_numeric(frame.get("Planned Quantity", frame["Delivered Quantity"]), errors="coerce").fillna(0)
@@ -44,11 +48,14 @@ def build_report(input_path: Path, output_path: Path | None = None) -> Path:
         pivot.to_excel(writer, sheet_name=sheet_name, index=False)
         frame.groupby("Basic Start Date", as_index=False)[["Planned Quantity", "Delivered Quantity"]].sum().to_excel(writer, sheet_name="Chart_Data", index=False)
         frame[frame["Delivered Quantity"].eq(0)].to_excel(writer, sheet_name="Exceptions", index=False)
+    LOG.info("STEP report workbook written: %s", output_path)
     format_workbook(output_path, sheet_name)
+    LOG.info("STEP report workbook formatted and chart added: %s", output_path)
     return output_path
 
 
 def format_workbook(path: Path, sheet_name: str) -> None:
+    LOG.info("STEP format workbook: %s", path)
     book = load_workbook(path)
     pivot = book[sheet_name]
     pivot.insert_rows(1, 2)

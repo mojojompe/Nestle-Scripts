@@ -482,7 +482,7 @@ def load_session_map():
 # ============================================================
 
 def handle_multi_logon_popup(session, timeout=5):
-    """NOT governed -- fires per popup-check poll, low individual COM cost."""
+    """Continue this logon without terminating any existing SAP logons."""
     start = time.time()
 
     while time.time() - start < timeout:
@@ -491,15 +491,12 @@ def handle_multi_logon_popup(session, timeout=5):
             if popup is None:
                 return True
 
-            for path in [
-                "wnd[1]/usr/radMULTI_LOGON_OPT2",
-                "wnd[1]/usr/radMULTI_LOGON_OPT1"
-            ]:
-                try:
-                    session.findById(path).select()
-                    break
-                except Exception:
-                    continue
+            continue_option = session.findById("wnd[1]/usr/radMULTI_LOGON_OPT2", False)
+            if continue_option is None:
+                return False
+            continue_option.select()
+            if not getattr(continue_option, "selected", True):
+                return False
 
             try:
                 session.findById("wnd[1]/tbar[0]/btn[0]").press()
@@ -600,7 +597,7 @@ def initialize_sap_connection(connection_index=0):
 
         # << GOVERNED >> The actual OpenConnection() COM call.
         conn = _governed(
-            lambda: application.OpenConnection(SAP_LOGON_NAME, True),
+            lambda: application.OpenConnection(SAP_LOGON_NAME, False),
             retry=False)
 
         wait_until = time.time() + 20

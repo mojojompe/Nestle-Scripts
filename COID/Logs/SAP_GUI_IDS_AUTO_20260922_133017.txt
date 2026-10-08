@@ -1,0 +1,11 @@
+id=/app/con[1]/ses[1]/wnd[1] | type=GuiModalWindow | name=wnd[1] | text=Save File | changeable=True
+id=/app/con[1]/ses[1]/wnd[1]/tbar[0] | type=GuiToolbar | name=tbar[0] | changeable=True
+id=/app/con[1]/ses[1]/wnd[1]/tbar[0]/btn[11] | type=GuiButton | name=btn[11] | text=Replace | tooltip=Replace existing file   (Ctrl+S) | changeable=True
+id=/app/con[1]/ses[1]/wnd[1]/tbar[0]/btn[12] | type=GuiButton | name=btn[12] | tooltip=Cancel   (F12) | changeable=True
+id=/app/con[1]/ses[1]/wnd[1]/tbar[0]/btn[0] | type=GuiButton | name=btn[0] | text=Generate | tooltip=Create new file   (Enter) | changeable=True
+id=/app/con[1]/ses[1]/wnd[1]/tbar[0]/btn[7] | type=GuiButton | name=btn[7] | text=Extend | tooltip=Append data to existing file   (F7) | changeable=True
+id=/app/con[1]/ses[1]/wnd[1]/usr | type=GuiUserArea | name=usr | changeable=True
+id=/app/con[1]/ses[1]/wnd[1]/usr/lblDY_PATH | type=GuiLabel | name=DY_PATH | text=Directory | changeable=False
+id=/app/con[1]/ses[1]/wnd[1]/usr/ctxtDY_PATH | type=GuiCTextField | name=DY_PATH | text=C:\\TEMP | changeable=True
+id=/app/con[1]/ses[1]/wnd[1]/usr/lblDY_FILENAME | type=GuiLabel | name=DY_FILENAME | text=File Name | changeable=False
+id=/app/con[1]/ses[1]/wnd[1]/usr/ctxtDY_FILENAME | type=GuiCTextField | name=DY_FILENAME | text=COID_4981_20260922_132918.xlsx | changeable=True

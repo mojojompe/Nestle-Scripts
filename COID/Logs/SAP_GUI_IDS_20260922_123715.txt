@@ -1,0 +1,127 @@
+id=/app/con[1]/ses[1]/wnd[0] | type=GuiMainWindow | name=wnd[0] | text=SAP Easy Access  -  User Menu for Emmanuel Jompe O9A (2) | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar | type=GuiMenubar | name=mbar | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[0] | type=GuiMenu | name=Menu | text=Menu | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[0] | type=GuiMenu | name=User Menu | text=User Menu | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[1] | type=GuiMenu | name=SAP Menu | text=SAP Menu | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[2] | type=GuiMenu | name=menu[2] | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[3] | type=GuiMenu | name=Business Workplace | text=Business Workplace | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[4] | type=GuiMenu | name=menu[4] | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[0]/menu[5] | type=GuiMenu | name=Refresh | text=Refresh | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[1] | type=GuiMenu | name=Edit | text=Edit | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[1]/menu[0] | type=GuiMenu | name=Execute | text=Execute | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[1]/menu[1] | type=GuiMenu | name=Execute in New Window | text=Execute in New Window | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[1]/menu[2] | type=GuiMenu | name=menu[2] | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[1]/menu[3] | type=GuiMenu | name=Create Shortcut on Desktop | text=Create Shortcut on Desktop | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2] | type=GuiMenu | name=Favorites | text=Favorites | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[0] | type=GuiMenu | name=Add | text=Add | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[1] | type=GuiMenu | name=Change | text=Change | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[2] | type=GuiMenu | name=menu[2] | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[3] | type=GuiMenu | name=Delete | text=Delete | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[4] | type=GuiMenu | name=menu[4] | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[5] | type=GuiMenu | name=Insert Folder | text=Insert Folder | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[6] | type=GuiMenu | name=Insert Transaction | text=Insert Transaction | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[7] | type=GuiMenu | name=Add Other Objects | text=Add Other Objects | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[8] | type=GuiMenu | name=menu[8] | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[9] | type=GuiMenu | name=Download to PC | text=Download to PC | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[2]/menu[10] | type=GuiMenu | name=Upload from PC | text=Upload from PC | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[3] | type=GuiMenu | name=Extras | text=Extras | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[3]/menu[0] | type=GuiMenu | name=Display Documentation | text=Display Documentation | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[3]/menu[1] | type=GuiMenu | name=Technical Details | text=Technical Details | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[3]/menu[2] | type=GuiMenu | name=menu[2] | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[3]/menu[3] | type=GuiMenu | name=Settings | text=Settings | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[3]/menu[4] | type=GuiMenu | name=Set Start Transaction | text=Set Start Transaction | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4] | type=GuiMenu | name=System | text=System | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[0] | type=GuiMenu | name=New GUI Window | text=New GUI Window | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[1] | type=GuiMenu | name=Close GUI Window | text=Close GUI Window | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[2] | type=GuiMenu | name=User Profile | text=User Profile | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[2]/menu[0] | type=GuiMenu | name=Hold Data | text=Hold Data | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[2]/menu[1] | type=GuiMenu | name=Set Data | text=Set Data | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[2]/menu[2] | type=GuiMenu | name=Delete Data | text=Delete Data | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[2]/menu[3] | type=GuiMenu | name=User Data | text=User Data | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[2]/menu[4] | type=GuiMenu | name=Expand Favorites | text=Expand Favorites | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3] | type=GuiMenu | name=Services | text=Services | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[0] | type=GuiMenu | name=Reporting | text=Reporting | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[1] | type=GuiMenu | name=QuickViewer | text=QuickViewer | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[2] | type=GuiMenu | name=Output Control | text=Output Control | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[3] | type=GuiMenu | name=Table Maintenance | text=Table Maintenance | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[3]/menu[0] | type=GuiMenu | name=Extended Table Maintenance | text=Extended Table Maintenance | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[3]/menu[1] | type=GuiMenu | name=View Cluster Maintenance | text=View Cluster Maintenance | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4] | type=GuiMenu | name=Batch Input | text=Batch Input | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[0] | type=GuiMenu | name=Sessions | text=Sessions | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[1] | type=GuiMenu | name=Logs | text=Logs | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[2] | type=GuiMenu | name=Recorder | text=Recorder | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[3] | type=GuiMenu | name=Restart Transaction | text=Restart Transaction | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[4] | type=GuiMenu | name=Delete Transaction | text=Delete Transaction | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[5] | type=GuiMenu | name=Next Transaction | text=Next Transaction | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[6] | type=GuiMenu | name=Process in Foreground | text=Process in Foreground | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[7] | type=GuiMenu | name=Display Errors Only | text=Display Errors Only | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[8] | type=GuiMenu | name=Expert Mode On | text=Expert Mode On | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[9] | type=GuiMenu | name=Expert Mode Off | text=Expert Mode Off | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[4]/menu[10] | type=GuiMenu | name=Cancel | text=Cancel | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[5] | type=GuiMenu | name=Fast Entry | text=Fast Entry | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[5]/menu[0] | type=GuiMenu | name=Recorder | text=Recorder | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[5]/menu[1] | type=GuiMenu | name=Process in Foreground | text=Process in Foreground | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[5]/menu[2] | type=GuiMenu | name=Display Errors Only | text=Display Errors Only | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[5]/menu[3] | type=GuiMenu | name=Cancel | text=Cancel | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[6] | type=GuiMenu | name=Direct Input | text=Direct Input | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[7] | type=GuiMenu | name=Jobs | text=Jobs | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[7]/menu[0] | type=GuiMenu | name=Define Job | text=Define Job | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[7]/menu[1] | type=GuiMenu | name=Job Overview | text=Job Overview | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[3]/menu[8] | type=GuiMenu | name=Queue | text=Queue | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4] | type=GuiMenu | name=Utilities | text=Utilities | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[0] | type=GuiMenu | name=Debug Dynpro | text=Debug Dynpro | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[1] | type=GuiMenu | name=Debug ABAP | text=Debug ABAP | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[2] | type=GuiMenu | name=Debug System | text=Debug System | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[3] | type=GuiMenu | name=Resource Usage | text=Resource Usage | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[4] | type=GuiMenu | name=Autom. Queue: Synchronous Processing | text=Autom. Queue: Synchronous Processing | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[5] | type=GuiMenu | name=Performance Trace | text=Performance Trace | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[6] | type=GuiMenu | name=Context Trace | text=Context Trace | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[7] | type=GuiMenu | name=Runtime Analysis | text=Runtime Analysis | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[7]/menu[0] | type=GuiMenu | name=Execute | text=Execute | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[7]/menu[1] | type=GuiMenu | name=Switch On | text=Switch On | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[7]/menu[2] | type=GuiMenu | name=Switch Off | text=Switch Off | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[8] | type=GuiMenu | name=Display Authorization Check | text=Display Authorization Check | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[9] | type=GuiMenu | name=Memory Analysis | text=Memory Analysis | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[9]/menu[0] | type=GuiMenu | name=Create Memory Snapshot | text=Create Memory Snapshot | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[4]/menu[9]/menu[1] | type=GuiMenu | name=Compare Memory Snapshots | text=Compare Memory Snapshots | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[5] | type=GuiMenu | name=Services for Object | text=Services for Object | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[6] | type=GuiMenu | name=My Objects | text=My Objects | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[6]/menu[0] | type=GuiMenu | name=Object History | text=Object History | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[6]/menu[1] | type=GuiMenu | name=Edit Objects | text=Edit Objects | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[7] | type=GuiMenu | name=Own Spool Requests | text=Own Spool Requests | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[8] | type=GuiMenu | name=Own Jobs | text=Own Jobs | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[9] | type=GuiMenu | name=Short Message | text=Short Message | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[10] | type=GuiMenu | name=Status... | text=Status... | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[4]/menu[11] | type=GuiMenu | name=Log Off | text=Log Off | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[5] | type=GuiMenu | name=Help | text=Help | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[0] | type=GuiMenu | name=Product Assistance | text=Product Assistance | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[1] | type=GuiMenu | name=SAP Help Portal | text=SAP Help Portal | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[2] | type=GuiMenu | name=menu[2] | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[3] | type=GuiMenu | name=SAP Support Portal | text=SAP Support Portal | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[4] | type=GuiMenu | name=Create Support Message | text=Create Support Message | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[5] | type=GuiMenu | name=menu[5] | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/mbar/menu[5]/menu[6] | type=GuiMenu | name=Settings... | text=Settings... | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/tbar[0] | type=GuiToolbar | name=tbar[0] | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/tbar[0]/btn[0] | type=GuiButton | name=btn[0] | text=Execute | tooltip=Execute   (Enter) | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/tbar[0]/btn[15] | type=GuiButton | name=btn[15] | text=Exit | tooltip=Log Off   (Shift+F3) | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/tbar[0]/btn[86] | type=GuiButton | name=btn[86] | tooltip=Print   (Ctrl+P) | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/tbar[0]/btn[71] | type=GuiButton | name=btn[71] | tooltip=Find   (Ctrl+F) | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/tbar[0]/btn[84] | type=GuiButton | name=btn[84] | tooltip=Find Next   (Ctrl+G) | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/tbar[0]/okcd | type=GuiOkCodeField | name=okcd | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/titl | type=GuiTitlebar | name=titl | text=SAP Easy Access  -  User Menu for Emmanuel Jompe
+id=/app/con[1]/ses[1]/wnd[0]/tbar[1] | type=GuiToolbar | name=tbar[1] | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/tbar[1]/btnvhmore | type=GuiButton | name=btnvhmore | text=More | tooltip=More (Alt+F12) | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/tbar[1]/btn[34] | type=GuiButton | name=btn[34] | tooltip=User Menu   (Ctrl+F10) | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/tbar[1]/btn[35] | type=GuiButton | name=btn[35] | tooltip=SAP Menu   (Ctrl+F11) | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/tbar[1]/btn[36] | type=GuiButton | name=btn[36] | tooltip=SAP Business Workplace   (Ctrl+F12) | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/tbar[1]/btn[42] | type=GuiButton | name=btn[42] | tooltip=Add to favorites   (Ctrl+Shift+F6) | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr | type=GuiUserArea | name=usr | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/cntlIMAGE_CONTAINER | type=GuiCustomControl | name=IMAGE_CONTAINER | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont | type=GuiContainerShell | name=shellcont | text=SAPGUI.CONTAINERCTRL.1 | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell | type=GuiSplitterShell | name=shell | text=SAPGUI.SplitterCtrl.1 | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[0] | type=GuiContainerShell | name=shellcont[0] | text=SAPGUI.CONTAINERCTRL.1 | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[0]/shell | type=GuiShell | name=shell | text=SAP.TableTreeControl.1 | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[1] | type=GuiContainerShell | name=shellcont[1] | text=SAPGUI.CONTAINERCTRL.1 | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[1]/shell | type=GuiShell | name=shell | text=SAPGUI.ImageCtrl.1 | changeable=True
+id=/app/con[1]/ses[1]/wnd[0]/sbar | type=GuiStatusbar | name=sbar | changeable=False
+id=/app/con[1]/ses[1]/wnd[0]/sbar/pane[0] | type=GuiStatusPane | name=pane[0] | changeable=False

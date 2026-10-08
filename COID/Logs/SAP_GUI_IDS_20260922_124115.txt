@@ -1,0 +1,13 @@
+id=/app/con[1]/ses[1]/wnd[1] | type=GuiModalWindow | name=wnd[1] | text=Export As | changeable=True
+id=/app/con[1]/ses[1]/wnd[1]/tbar[0] | type=GuiToolbar | name=tbar[0] | changeable=True
+id=/app/con[1]/ses[1]/wnd[1]/tbar[0]/btn[20] | type=GuiButton | name=btn[20] | text=Export to... | tooltip=Export data   (Shift+F8) | changeable=True
+id=/app/con[1]/ses[1]/wnd[1]/tbar[0]/btn[12] | type=GuiButton | name=btn[12] | text=Cancel | tooltip=Leave without updating settings   (F12) | changeable=True
+id=/app/con[1]/ses[1]/wnd[1]/usr | type=GuiUserArea | name=usr | changeable=True
+id=/app/con[1]/ses[1]/wnd[1]/usr/ssubSUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512 | type=GuiScrollContainer | name=SUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512 | changeable=True
+id=/app/con[1]/ses[1]/wnd[1]/usr/ssubSUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512/boxBOX_GENERAL | type=GuiBox | name=BOX_GENERAL | text=General | changeable=False
+id=/app/con[1]/ses[1]/wnd[1]/usr/ssubSUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512/lblGS_EXPORT-FILE_NAME | type=GuiLabel | name=GS_EXPORT-FILE_NAME | text=File name | tooltip=File name for export | changeable=False
+id=/app/con[1]/ses[1]/wnd[1]/usr/ssubSUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512/txtGS_EXPORT-FILE_NAME | type=GuiTextField | name=GS_EXPORT-FILE_NAME | text=EXPORT_20260922_124043 | changeable=True
+id=/app/con[1]/ses[1]/wnd[1]/usr/ssubSUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512/lblGS_EXPORT-FORMAT | type=GuiLabel | name=GS_EXPORT-FORMAT | text=Format | changeable=False
+id=/app/con[1]/ses[1]/wnd[1]/usr/ssubSUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512/cmbGS_EXPORT-FORMAT | type=GuiComboBox | name=GS_EXPORT-FORMAT | text=Microsoft Excel (*.xlsx) | changeable=True
+id=/app/con[1]/ses[1]/wnd[1]/usr/ssubSUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512/lblGS_EXPORT-DESTINATION | type=GuiLabel | name=GS_EXPORT-DESTINATION | text=Destination | changeable=False
+id=/app/con[1]/ses[1]/wnd[1]/usr/ssubSUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512/cmbGS_EXPORT-DESTINATION | type=GuiComboBox | name=GS_EXPORT-DESTINATION | text=Local | changeable=False

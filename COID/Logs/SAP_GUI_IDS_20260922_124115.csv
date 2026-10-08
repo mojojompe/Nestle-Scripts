@@ -1,0 +1,14 @@
+﻿id,type,name,text,tooltip,selected,changeable
+/app/con[1]/ses[1]/wnd[1],GuiModalWindow,wnd[1],Export As,,,True
+/app/con[1]/ses[1]/wnd[1]/tbar[0],GuiToolbar,tbar[0],,,,True
+/app/con[1]/ses[1]/wnd[1]/tbar[0]/btn[20],GuiButton,btn[20],Export to...,Export data   (Shift+F8),,True
+/app/con[1]/ses[1]/wnd[1]/tbar[0]/btn[12],GuiButton,btn[12],Cancel,Leave without updating settings   (F12),,True
+/app/con[1]/ses[1]/wnd[1]/usr,GuiUserArea,usr,,,,True
+/app/con[1]/ses[1]/wnd[1]/usr/ssubSUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512,GuiScrollContainer,SUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512,,,,True
+/app/con[1]/ses[1]/wnd[1]/usr/ssubSUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512/boxBOX_GENERAL,GuiBox,BOX_GENERAL,General,,,False
+/app/con[1]/ses[1]/wnd[1]/usr/ssubSUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512/lblGS_EXPORT-FILE_NAME,GuiLabel,GS_EXPORT-FILE_NAME,File name,File name for export,,False
+/app/con[1]/ses[1]/wnd[1]/usr/ssubSUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512/txtGS_EXPORT-FILE_NAME,GuiTextField,GS_EXPORT-FILE_NAME,EXPORT_20260922_124043,,,True
+/app/con[1]/ses[1]/wnd[1]/usr/ssubSUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512/lblGS_EXPORT-FORMAT,GuiLabel,GS_EXPORT-FORMAT,Format,,,False
+/app/con[1]/ses[1]/wnd[1]/usr/ssubSUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512/cmbGS_EXPORT-FORMAT,GuiComboBox,GS_EXPORT-FORMAT,Microsoft Excel (*.xlsx),,,True
+/app/con[1]/ses[1]/wnd[1]/usr/ssubSUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512/lblGS_EXPORT-DESTINATION,GuiLabel,GS_EXPORT-DESTINATION,Destination,,,False
+/app/con[1]/ses[1]/wnd[1]/usr/ssubSUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512/cmbGS_EXPORT-DESTINATION,GuiComboBox,GS_EXPORT-DESTINATION,Local,,,False
