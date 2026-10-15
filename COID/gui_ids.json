@@ -4,6 +4,7 @@
   "continue": "",
   "process_plnd_orders": "wnd[0]/usr/ctxtP_AUTFP",
   "profile": "wnd[0]/usr/ctxtP_PROFID",
+  "layout": "wnd[0]/usr/ctxtP_LAYOUT",
   "header_plant_from": "wnd[0]/usr/ctxtS_WERKS-LOW",
   "header_plant_to": "",
   "basic_start_date_from": "wnd[0]/usr/ctxtS_ECKST-LOW",

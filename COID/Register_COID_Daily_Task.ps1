@@ -7,8 +7,9 @@ if (-not (Test-Path $python)) { throw "Python executable not found: $python" }
 if (-not (Test-Path $script)) { throw "COID script not found: $script" }
 
 $action = New-ScheduledTaskAction -Execute $python -Argument "`"$script`"" -WorkingDirectory $workingDir
-$trigger = New-ScheduledTaskTrigger -Daily -At 07:00
+$trigger = New-ScheduledTaskTrigger -Daily -At 08:00
 $settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -MultipleInstances IgnoreNew -ExecutionTimeLimit (New-TimeSpan -Hours 2)
+$principal = New-ScheduledTaskPrincipal -UserId "$env:USERDOMAIN\$env:USERNAME" -LogonType Interactive -RunLevel Limited
 
-Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $trigger -Settings $settings -Description 'Extracts COID for plant 4981 and creates the daily PlanVSAchvd workbook.' -Force | Out-Null
-Write-Host "Registered $taskName for daily 07:00 execution."
+Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $trigger -Settings $settings -Principal $principal -Description 'Extracts COID for plant 4981 and creates the daily PlanVSAchvd workbook.' -Force | Out-Null
+Write-Host "Registered $taskName for daily 08:00 execution as $($principal.UserId)."

@@ -30,6 +30,7 @@ from sap_session import (  # noqa: E402
     with_retry,
 )
 from sap_trigger import trigger_sap  # noqa: E402
+from sap_trigger import start_sap_connection_prompt_watcher  # noqa: E402
 
 CONFIG_PATH = COID_DIR / "gui_ids.json"
 OUTPUT_DIR = COID_DIR / "OutputFile"
@@ -40,6 +41,7 @@ REQUIRED_COLUMNS = [
     "Material",
     "Material Description",
     "Basic Start Date",
+    "Planned Quantity",
     "Delivered Quantity",
     "Order Type",
 ]
@@ -48,6 +50,10 @@ ALIASES = {
     "material description": "Material Description",
     "basic start date": "Basic Start Date",
     "basic start": "Basic Start Date",
+    "order quantity": "Planned Quantity",
+    "order qty": "Planned Quantity",
+    "planned qty": "Planned Quantity",
+    "planned quantity": "Planned Quantity",
     "delivered quantity": "Delivered Quantity",
     "delivered qty": "Delivered Quantity",
     "order type": "Order Type",
@@ -125,22 +131,26 @@ def choose(session, ids: dict[str, str], name: str, log: logging.Logger) -> None
     log.info("STEP complete: select %s", name)
 
 
-def wait_for_file(path: Path, timeout: int = 60) -> None:
+def wait_for_file(path: Path, timeout: int = 180) -> None:
     """Wait until SAP/OneDrive has finished publishing a readable export."""
-    deadline = time.time() + timeout
-    while time.time() < deadline:
-        if path.exists() and path.stat().st_size > 0:
-            try:
+    deadline = time.monotonic() + timeout
+    last_error: OSError | None = None
+    while time.monotonic() < deadline:
+        try:
+            if path.is_file() and path.stat().st_size > 0:
                 with path.open("rb") as stream:
                     stream.read(8)
                 size = path.stat().st_size
                 time.sleep(1)
-                if path.exists() and path.stat().st_size == size:
+                if path.is_file() and path.stat().st_size == size:
                     return
-            except (OSError, PermissionError):
-                pass
+        except OSError as error:
+            last_error = error
         time.sleep(1)
-    raise RuntimeError(f"SAP export was not readable within {timeout}s: {path}")
+    raise RuntimeError(
+        f"SAP export was not readable within {timeout}s: {path} "
+        f"(exists={path.exists()}, last_read_error={last_error})"
+    )
 
 
 def snapshot_window(session, window_id: str, log: logging.Logger) -> None:
@@ -239,10 +249,13 @@ def normalize(raw_path: Path, clean_path: Path, log: logging.Logger) -> Path:
     missing = [column for column in REQUIRED_COLUMNS if column not in frame.columns]
     if missing:
         raise RuntimeError(f"COID export is missing required columns: {missing}")
+    frame["Material"] = frame["Material"].astype(str).str.strip()
+    frame["Material Type"] = frame["Material"].str[0].map({"4": "HALB", "1": "FERT"}).fillna("Other")
     frame["Basic Start Date"] = pd.to_datetime(frame["Basic Start Date"], dayfirst=True, errors="coerce").dt.strftime("%Y-%m-%d")
+    frame["Planned Quantity"] = pd.to_numeric(frame["Planned Quantity"].astype(str).str.replace(",", "", regex=False), errors="coerce").fillna(0)
     frame["Delivered Quantity"] = pd.to_numeric(frame["Delivered Quantity"].astype(str).str.replace(",", "", regex=False), errors="coerce").fillna(0)
     frame = frame[frame["Material"].astype(str).str.strip() != ""].copy()
-    frame = frame.sort_values(["Material", "Material Description", "Basic Start Date"], kind="stable")
+    frame = frame.sort_values(["Material Type", "Material", "Material Description", "Basic Start Date"], kind="stable")
     clean_path.parent.mkdir(parents=True, exist_ok=True)
     frame.to_csv(clean_path, index=False, encoding="utf-8-sig")
     log.info("Clean COID rows=%d: %s", len(frame), clean_path)
@@ -255,7 +268,7 @@ def run(dry_run: bool = False) -> Path | None:
     session = None
     try:
         ids = load_ids(log)
-        required_ids = ["process_plnd_orders", "profile", "header_plant_from", "basic_start_date_from", "basic_start_date_to", "execute", "export_grid", "export_popup_button", "export_filename", "save_file_directory", "save_file_name", "save_file_generate"]
+        required_ids = ["process_plnd_orders", "profile", "layout", "header_plant_from", "basic_start_date_from", "basic_start_date_to", "execute", "export_grid", "export_popup_button", "export_filename", "save_file_directory", "save_file_name", "save_file_generate"]
         require_ids(ids, required_ids)
         log.info("Validated required GUI IDs: %s", ", ".join(required_ids))
         week_start, week_end = current_week()
@@ -266,6 +279,7 @@ def run(dry_run: bool = False) -> Path | None:
         log.info("COID current week: %s .. %s", week_start, week_end)
         log.info("STEP connect to SAP")
         try:
+            sap_prompt_stop = start_sap_connection_prompt_watcher()
             trigger_sap()
         except TypeError:
             trigger_sap("Regional Systems - 6. Production - AOA - S4 ERP MONO on HANA (O9A)")
@@ -284,6 +298,7 @@ def run(dry_run: bool = False) -> Path | None:
         log.info("STEP complete: continue from COID object selection")
         set_text(session, ids, "process_plnd_orders", "1", log)
         set_text(session, ids, "profile", "000001", log)
+        set_text(session, ids, "layout", "FGCOID", log)
         set_text(session, ids, "header_plant_from", "4981", log)
         if ids.get("header_plant_to"):
             set_text(session, ids, "header_plant_to", "4981", log)
@@ -304,6 +319,8 @@ def run(dry_run: bool = False) -> Path | None:
         log.exception("COID run failed; inspect the preceding STEP/GUI lookup entry")
         raise
     finally:
+        if "sap_prompt_stop" in locals():
+            sap_prompt_stop.set()
         if session is not None:
             try:
                 session.findById("wnd[0]").close()

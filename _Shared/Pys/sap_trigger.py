@@ -1,5 +1,6 @@
 
 import os
+import threading
 import time
 import subprocess
 import win32com.client
@@ -7,6 +8,53 @@ import pythoncom
 
 SAPLGPAD_EXE = r"C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe"
 MK_E_SYNTAX = -2147221020  # 0x800401E4: "SAPGUI" not yet in the Running Object Table
+
+
+def start_sap_connection_prompt_watcher(
+    sap_logon_name: str = "Regional Systems - 6. Production - AOA - S4 ERP MONO on HANA (O9A)",
+) -> threading.Event:
+    """Dismiss only SAP's explicit scripting connection-warning dialog."""
+    stop_event = threading.Event()
+
+    def watch() -> None:
+        try:
+            import win32con
+            import win32gui
+        except ImportError as error:
+            print(f"[trigger_sap] Cannot automate SAP connection prompt: {error}")
+            return
+
+        def inspect_window(hwnd, _):
+            if "sap logon" not in win32gui.GetWindowText(hwnd).casefold():
+                return
+            child_text = []
+            buttons = []
+
+            def inspect_child(child, _):
+                text = win32gui.GetWindowText(child).strip()
+                if text:
+                    child_text.append(text)
+                if win32gui.GetClassName(child) == "Button" and text.casefold().replace("&", "") == "ok":
+                    buttons.append(child)
+
+            win32gui.EnumChildWindows(hwnd, inspect_child, None)
+            warning_text = " ".join(child_text).casefold()
+            if (
+                "a script is opening a connection to system" in warning_text
+                and sap_logon_name.casefold() in warning_text
+                and buttons
+            ):
+                win32gui.SendMessage(buttons[0], win32con.BM_CLICK, 0, 0)
+                print("[trigger_sap] Automatically confirmed SAP connection prompt.")
+
+        while not stop_event.wait(0.25):
+            try:
+                win32gui.EnumWindows(inspect_window, None)
+            except Exception:
+                pass
+
+    threading.Thread(target=watch, name="sap-connection-prompt-watcher", daemon=True).start()
+    return stop_event
 
 
 def _saplgpad_running() -> bool:
