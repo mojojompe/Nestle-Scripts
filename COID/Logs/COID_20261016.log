@@ -1,0 +1,106 @@
+2026-10-16 08:00:04,738 | INFO | STEP start COID run (dry_run=False)
+2026-10-16 08:00:04,778 | INFO | Loaded GUI ID configuration: C:\Users\ngjompeem\OneDrive - NESTLE\Documents\All_Locations_for Emmanuel\COID\gui_ids.json
+2026-10-16 08:00:04,778 | INFO | Validated required GUI IDs: process_plnd_orders, profile, layout, header_plant_from, basic_start_date_from, basic_start_date_to, execute, export_grid, export_popup_button, export_filename, save_file_directory, save_file_name, save_file_generate
+2026-10-16 08:00:04,779 | INFO | COID current week: 2026-10-12 .. 2026-10-18
+2026-10-16 08:00:04,779 | INFO | STEP connect to SAP
+2026-10-16 08:00:14,230 | INFO | STEP initialize SAP connection
+2026-10-16 08:00:23,757 | INFO | COID_4981: session stabilized after 2.0s (3 probes)
+2026-10-16 08:00:23,758 | INFO | STEP open transaction: /nCOID
+2026-10-16 08:00:24,640 | INFO | Opened COID via okcd
+2026-10-16 08:00:24,642 | INFO | STEP continue from COID object selection via Enter
+2026-10-16 08:00:25,672 | INFO | STEP complete: continue from COID object selection
+2026-10-16 08:00:25,672 | INFO | STEP set process_plnd_orders = 1
+2026-10-16 08:00:25,672 | INFO | GUI lookup: process_plnd_orders -> wnd[0]/usr/ctxtP_AUTFP
+2026-10-16 08:00:25,742 | INFO | GUI control found: process_plnd_orders
+2026-10-16 08:00:25,761 | INFO | STEP complete: set process_plnd_orders
+2026-10-16 08:00:25,762 | INFO | STEP set profile = 000001
+2026-10-16 08:00:25,762 | INFO | GUI lookup: profile -> wnd[0]/usr/ctxtP_PROFID
+2026-10-16 08:00:25,764 | INFO | GUI control found: profile
+2026-10-16 08:00:25,766 | INFO | STEP complete: set profile
+2026-10-16 08:00:25,767 | INFO | STEP set layout = FGCOID
+2026-10-16 08:00:25,767 | INFO | GUI lookup: layout -> wnd[0]/usr/ctxtP_LAYOUT
+2026-10-16 08:00:25,769 | INFO | GUI control found: layout
+2026-10-16 08:00:25,773 | INFO | STEP complete: set layout
+2026-10-16 08:00:25,773 | INFO | STEP set header_plant_from = 4981
+2026-10-16 08:00:25,773 | INFO | GUI lookup: header_plant_from -> wnd[0]/usr/ctxtS_WERKS-LOW
+2026-10-16 08:00:25,776 | INFO | GUI control found: header_plant_from
+2026-10-16 08:00:25,778 | INFO | STEP complete: set header_plant_from
+2026-10-16 08:00:25,778 | INFO | STEP set basic_start_date_from = 12.10.2026
+2026-10-16 08:00:25,778 | INFO | GUI lookup: basic_start_date_from -> wnd[0]/usr/ctxtS_ECKST-LOW
+2026-10-16 08:00:25,788 | INFO | GUI control found: basic_start_date_from
+2026-10-16 08:00:25,790 | INFO | STEP complete: set basic_start_date_from
+2026-10-16 08:00:25,791 | INFO | STEP set basic_start_date_to = 18.10.2026
+2026-10-16 08:00:25,791 | INFO | GUI lookup: basic_start_date_to -> wnd[0]/usr/ctxtS_ECKST-HIGH
+2026-10-16 08:00:25,798 | INFO | GUI control found: basic_start_date_to
+2026-10-16 08:00:25,800 | INFO | STEP complete: set basic_start_date_to
+2026-10-16 08:00:25,800 | INFO | COID selections applied: process/planned=1, profile=000001, plant=4981
+2026-10-16 08:00:25,800 | INFO | STEP execute COID: wnd[0]/tbar[1]/btn[8]
+2026-10-16 08:00:25,801 | INFO | GUI lookup: execute -> wnd[0]/tbar[1]/btn[8]
+2026-10-16 08:00:25,802 | INFO | GUI control found: execute
+2026-10-16 08:00:28,661 | INFO | STEP complete: execute COID
+2026-10-16 08:00:30,662 | INFO | STEP open ALV export menu
+2026-10-16 08:00:30,662 | INFO | GUI lookup: export_grid -> wnd[0]/usr/cntlGRID_0100/shellcont/shell
+2026-10-16 08:00:30,671 | INFO | GUI control found: export_grid
+2026-10-16 08:00:33,188 | INFO | STEP complete: open ALV export dialog
+2026-10-16 08:00:34,189 | INFO | STEP set export_filename = COID_4981_20261016_080004.xlsx
+2026-10-16 08:00:34,189 | INFO | GUI lookup: export_filename -> wnd[1]/usr/ssubSUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512/txtGS_EXPORT-FILE_NAME
+2026-10-16 08:00:34,198 | INFO | GUI control found: export_filename
+2026-10-16 08:00:34,217 | INFO | STEP complete: set export_filename
+2026-10-16 08:00:34,217 | INFO | STEP select Export to... button
+2026-10-16 08:00:34,218 | INFO | GUI lookup: export_popup_button -> wnd[1]/tbar[0]/btn[20]
+2026-10-16 08:00:34,225 | INFO | GUI control found: export_popup_button
+2026-10-16 08:00:35,656 | INFO | STEP complete: select Export to... button
+2026-10-16 08:00:35,657 | INFO | STEP set save_file_directory = C:\Users\ngjompeem\OneDrive - NESTLE\Documents\All_Locations_for Emmanuel\COID\OutputFile
+2026-10-16 08:00:35,657 | INFO | GUI lookup: save_file_directory -> wnd[1]/usr/ctxtDY_PATH
+2026-10-16 08:00:35,741 | INFO | GUI control found: save_file_directory
+2026-10-16 08:00:35,744 | INFO | STEP complete: set save_file_directory
+2026-10-16 08:00:35,744 | INFO | STEP set save_file_name = COID_4981_20261016_080004.xlsx
+2026-10-16 08:00:35,744 | INFO | GUI lookup: save_file_name -> wnd[1]/usr/ctxtDY_FILENAME
+2026-10-16 08:00:35,751 | INFO | GUI control found: save_file_name
+2026-10-16 08:00:35,775 | INFO | STEP complete: set save_file_name
+2026-10-16 08:00:35,781 | INFO | STEP generate Save File export
+2026-10-16 08:00:35,781 | INFO | GUI lookup: save_file_generate -> wnd[1]/tbar[0]/btn[0]
+2026-10-16 08:00:35,812 | INFO | GUI control found: save_file_generate
+2026-10-16 08:00:38,592 | INFO | STEP complete: generate Save File export
+2026-10-16 08:00:38,719 | WARNING | GUI snapshot skipped; window not found: wnd[1]
+2026-10-16 08:00:39,720 | INFO | Raw COID export: C:\Users\ngjompeem\OneDrive - NESTLE\Documents\All_Locations_for Emmanuel\COID\OutputFile\COID_4981_20261016_080004.xlsx
+2026-10-16 08:00:39,722 | INFO | STEP normalize export: C:\Users\ngjompeem\OneDrive - NESTLE\Documents\All_Locations_for Emmanuel\COID\OutputFile\COID_4981_20261016_080004.xlsx
+2026-10-16 08:01:09,754 | ERROR | COID run failed; inspect the preceding STEP/GUI lookup entry
+Traceback (most recent call last):
+  File "C:\Users\ngjompeem\OneDrive - NESTLE\Documents\All_Locations_for Emmanuel\COID\Pys\coid_engine.py", line 161, in read_excel_with_retry
+    return pd.read_excel(path, dtype=str)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ngjompeem\OneDrive - NESTLE\Documents\All_Locations_for Emmanuel\.conda\Lib\site-packages\pandas\io\excel\_base.py", line 481, in read_excel
+    io = ExcelFile(
+        io,
+    ...<2 lines>...
+        engine_kwargs=engine_kwargs,
+    )
+  File "C:\Users\ngjompeem\OneDrive - NESTLE\Documents\All_Locations_for Emmanuel\.conda\Lib\site-packages\pandas\io\excel\_base.py", line 1604, in __init__
+    ext = inspect_excel_format(
+        content_or_path=path_or_buffer, storage_options=storage_options
+    )
+  File "C:\Users\ngjompeem\OneDrive - NESTLE\Documents\All_Locations_for Emmanuel\.conda\Lib\site-packages\pandas\io\excel\_base.py", line 1452, in inspect_excel_format
+    with get_handle(
+         ~~~~~~~~~~^
+        content_or_path, "rb", storage_options=storage_options, is_text=False
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as handle:
+    ^
+  File "C:\Users\ngjompeem\OneDrive - NESTLE\Documents\All_Locations_for Emmanuel\.conda\Lib\site-packages\pandas\io\common.py", line 939, in get_handle
+    handle = open(handle, ioargs.mode)
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\ngjompeem\\OneDrive - NESTLE\\Documents\\All_Locations_for Emmanuel\\COID\\OutputFile\\COID_4981_20261016_080004.xlsx'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ngjompeem\OneDrive - NESTLE\Documents\All_Locations_for Emmanuel\COID\Pys\coid_engine.py", line 331, in run
+    return normalize(raw_path, clean_path, log)
+  File "C:\Users\ngjompeem\OneDrive - NESTLE\Documents\All_Locations_for Emmanuel\COID\Pys\coid_engine.py", line 257, in normalize
+    frame = read_excel_with_retry(raw_path)
+  File "C:\Users\ngjompeem\OneDrive - NESTLE\Documents\All_Locations_for Emmanuel\COID\Pys\coid_engine.py", line 164, in read_excel_with_retry
+    raise RuntimeError(
+        f"SAP export remained locked for {timeout}s: {path}"
+    ) from error
+RuntimeError: SAP export remained locked for 30s: C:\Users\ngjompeem\OneDrive - NESTLE\Documents\All_Locations_for Emmanuel\COID\OutputFile\COID_4981_20261016_080004.xlsx
+2026-10-16 08:01:10,152 | INFO | SAP COID session closed

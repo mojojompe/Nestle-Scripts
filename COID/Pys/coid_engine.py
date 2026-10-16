@@ -153,6 +153,20 @@ def wait_for_file(path: Path, timeout: int = 180) -> None:
     )
 
 
+def read_excel_with_retry(path: Path, timeout: int = 30) -> pd.DataFrame:
+    """Retry SAP/OneDrive file-lock errors while importing the export."""
+    deadline = time.monotonic() + timeout
+    while True:
+        try:
+            return pd.read_excel(path, dtype=str)
+        except PermissionError as error:
+            if time.monotonic() >= deadline:
+                raise RuntimeError(
+                    f"SAP export remained locked for {timeout}s: {path}"
+                ) from error
+            time.sleep(0.5)
+
+
 def snapshot_window(session, window_id: str, log: logging.Logger) -> None:
     """Write the current SAP window controls without changing the UI."""
     try:
@@ -240,7 +254,7 @@ def export_current_report(session, ids: dict[str, str], raw_path: Path, log: log
 def normalize(raw_path: Path, clean_path: Path, log: logging.Logger) -> Path:
     log.info("STEP normalize export: %s", raw_path)
     if raw_path.suffix.lower() in {".xlsx", ".xls"}:
-        frame = pd.read_excel(raw_path, dtype=str)
+        frame = read_excel_with_retry(raw_path)
     else:
         frame = pd.read_csv(raw_path, dtype=str, encoding="utf-8-sig", keep_default_na=False)
     frame.columns = [str(column).replace("\ufeff", "").strip() for column in frame.columns]
