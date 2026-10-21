@@ -11,11 +11,11 @@ This folder contains a self-contained COID extraction and reporting workflow.
 5. Set Profile = `000001`.
 6. Set Layout = `FGCOID`.
 7. Set Header Level Plant = `4981`.
-8. Set the report period: Monday runs the previous Monday-Sunday; Tuesday-Friday runs current Monday through today.
+8. Set the report period: Monday runs the previous Monday-Sunday; Tuesday-Friday runs current Monday through yesterday.
 9. Execute and export the report.
 10. Normalize the detailed `Data` sheet into `CleanFile`.
 11. Build `Production Plan_YYYY-MM-DD.xlsx` for Tuesday-Friday or `Production Plan_WeekXX_YYYY.xlsx` on Monday.
-12. Create a sorted, filterable WTD pivot-style table and dashboard charts for HALB and the six FERT families.
+12. Create a native PivotTable with Material and Material Description in rows, Order Type as a filter, Basic Start Date in columns, and summed Delivered Quantity as values; then build the dashboard charts.
 
 ## First configuration step
 
@@ -31,7 +31,7 @@ python .\Pys\production_report.py --input .\CleanFile\COID_4981_clean.csv
 
 The dry run opens COID, applies the selections, and stops before Execute/export. A normal run writes raw files to `OutputFile`, cleaned CSV to `CleanFile`, and the workbook to `Export`.
 
-HALB quantities in KG are converted to metric tons at 0.001 ton per KG. FERT case quantities are multiplied by the SKU pack weight parsed from the material description, divided by 1,000,000. Unsupported order types, units, or pack descriptions are listed on `Exceptions` and excluded from chart totals. `WTD_Pivot` is a generated, sortable/filterable cross-tab; `Dashboard` contains one plan-versus-achieved chart per family with planned volume in the selected period.
+HALB quantities in KG are converted to metric tons at 0.001 ton per KG. FERT case quantities are multiplied by the SKU pack weight parsed from the material description, divided by 1,000,000. Unsupported order types, units, or pack descriptions are listed on `Exceptions` and excluded from chart totals. `Dashboard` contains one plan-versus-achieved chart per family with planned volume in the selected period, and `Breakdown` shows daily planned, achieved, and Hit/Miss by material.
 
 ## For Automated Scheduling
 

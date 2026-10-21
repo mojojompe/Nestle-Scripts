@@ -334,14 +334,21 @@ def create_native_pivot(path: Path) -> None:
             TableDestination=pivot_sheet.Cells(4, 1),
             TableName="COIDWtdPivot",
         )
-        for position, field_name in enumerate(("Material", "Material Description", "Order Type"), 1):
+        for position, field_name in enumerate(("Material", "Material Description"), 1):
             field = pivot.PivotFields(field_name)
-            field.Orientation = 3
+            field.Orientation = 1
             field.Position = position
             try:
                 field.Subtotals = (False,) * 12
             except Exception:
                 pass
+        order_type_field = pivot.PivotFields("Order Type")
+        order_type_field.Orientation = 3
+        order_type_field.Position = 1
+        try:
+            order_type_field.Subtotals = (False,) * 12
+        except Exception:
+            pass
         date_field = pivot.PivotFields("Basic Start Date")
         date_field.Orientation = 2
         date_field.Position = 1
