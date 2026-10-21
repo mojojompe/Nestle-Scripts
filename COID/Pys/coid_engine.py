@@ -93,7 +93,7 @@ def reporting_period(today: date | None = None) -> tuple[date, date, str]:
         report_tag = f"Week{iso.week:02d}_{iso.year}"
     else:
         period_start = monday
-        period_end = today
+        period_end = today - timedelta(days=1)
         report_tag = today.strftime("%Y-%m-%d")
     return period_start, period_end, report_tag
 

@@ -11,6 +11,8 @@ import pandas as pd
 from openpyxl import load_workbook
 from openpyxl.chart import BarChart, Reference
 from openpyxl.chart.label import DataLabelList
+from openpyxl.chart.series import DataPoint
+from openpyxl.chart.shapes import GraphicalProperties
 from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
 
@@ -111,15 +113,6 @@ def build_report(
     eligible = eligible.sort_values(
         ["_Family Sort", "Material Description", "Material", "Basic Start Date"], kind="stable"
     )
-    pivot = eligible.groupby(
-        ["Product Family", "Material Type", "Material", "Material Description", "Unit of measure"],
-        as_index=False,
-        sort=False,
-    )[["Planned Tons", "Achieved Tons"]].sum()
-    pivot["_Family Sort"] = pivot["Product Family"].map(sort_rank).fillna(len(sort_rank))
-    pivot = pivot.sort_values(
-        ["_Family Sort", "Material Description", "Material"], kind="stable"
-    ).drop(columns="_Family Sort")
     chart_summary = eligible.groupby(
         ["Product Family", "Material Description"], as_index=False, sort=False
     )[["Planned Tons", "Achieved Tons"]].sum()
@@ -141,16 +134,66 @@ def build_report(
             f"{family} Achieved (t)": section["Achieved Tons"].reset_index(drop=True),
         }))
     chart_data = pd.concat(chart_data_parts, axis=1)
+    breakdown = eligible.groupby(
+        ["Basic Start Date", "Material", "Material Description", "Material Type", "Product Family"],
+        as_index=False,
+        sort=False,
+    )[["Planned Tons", "Achieved Tons"]].sum()
+    material_rows = breakdown[
+        ["Material", "Material Description", "Material Type", "Product Family"]
+    ].drop_duplicates()
+    all_dates = pd.date_range(period_start, period_end, freq="D") if period_start and period_end else pd.to_datetime(
+        eligible["Basic Start Date"].dropna().unique()
+    ).sort_values()
+    if len(all_dates):
+        calendar = pd.DataFrame({"Basic Start Date": all_dates.strftime("%Y-%m-%d")})
+        breakdown = calendar.merge(material_rows, how="cross").merge(
+            breakdown,
+            on=["Basic Start Date", "Material", "Material Description", "Material Type", "Product Family"],
+            how="left",
+        )
+        breakdown[["Planned Tons", "Achieved Tons"]] = breakdown[
+            ["Planned Tons", "Achieved Tons"]
+        ].fillna(0)
+    breakdown["Hit/Miss"] = breakdown.apply(
+        lambda row: "Hit" if row["Achieved Tons"] >= row["Planned Tons"] else "Miss",
+        axis=1,
+    )
+    breakdown = breakdown.rename(columns={
+        "Basic Start Date": "Date",
+        "Planned Tons": "Planned (t)",
+        "Achieved Tons": "Achieved (t)",
+    })
+    breakdown["_Family Sort"] = breakdown["Product Family"].map(sort_rank).fillna(len(sort_rank))
+    breakdown = breakdown.sort_values(
+        ["Date", "_Family Sort", "Material Description", "Material"], kind="stable"
+    ).drop(columns="_Family Sort")
     exceptions = frame[frame["Exception Reason"].ne("")].copy()
+    pivot_source = frame.copy()
+    existing_dates = set(pivot_source["Basic Start Date"].dropna().astype(str))
+    if period_start and period_end:
+        date_placeholders = []
+        for day in pd.date_range(period_start, period_end, freq="D"):
+            day_text = day.strftime("%Y-%m-%d")
+            if day_text not in existing_dates:
+                row = {column: "" for column in pivot_source.columns}
+                row["Basic Start Date"] = day_text
+                row["Delivered Quantity"] = 0
+                row["Planned Quantity"] = 0
+                date_placeholders.append(row)
+        if date_placeholders:
+            pivot_source = pd.concat([pivot_source, pd.DataFrame(date_placeholders)], ignore_index=True)
     scope_start = period_start.isoformat() if period_start else "All dates"
     scope_end = period_end.isoformat() if period_end else "All dates"
     if output_path is None:
         output_path = EXPORT_DIR / f"Production Plan_{date.today():%Y-%m-%d}.xlsx"
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with pd.ExcelWriter(output_path, engine="openpyxl") as writer:
-        pivot.to_excel(writer, sheet_name="WTD_Pivot", index=False)
+        pd.DataFrame().to_excel(writer, sheet_name="WTD_Pivot", index=False)
         frame.to_excel(writer, sheet_name="Source_Data", index=False)
+        pivot_source.to_excel(writer, sheet_name="Pivot_Source", index=False)
         chart_data.to_excel(writer, sheet_name="Chart_Data", index=False)
+        breakdown.to_excel(writer, sheet_name="Breakdown", index=False)
         exceptions.to_excel(writer, sheet_name="Exceptions", index=False)
     LOG.info("STEP report workbook written: %s", output_path)
     format_workbook(output_path, scope_start, scope_end, len(exceptions), active_families)
@@ -168,14 +211,7 @@ def format_workbook(
     LOG.info("STEP format workbook: %s", path)
     book = load_workbook(path)
     pivot = book["WTD_Pivot"]
-    pivot.freeze_panes = "A2"
-    pivot.auto_filter.ref = f"A1:{get_column_letter(pivot.max_column)}{pivot.max_row}"
-    for cell in pivot[1]:
-        cell.font = Font(bold=True, color="FFFFFF")
-        cell.fill = PatternFill("solid", fgColor="1F4E78")
-    for column in pivot.columns:
-        width = min(max(len(str(cell.value or "")) for cell in column) + 2, 32)
-        pivot.column_dimensions[get_column_letter(column[0].column)].width = width
+    pivot.sheet_view.showGridLines = False
     source = book["Source_Data"]
     source.freeze_panes = "A2"
     source.auto_filter.ref = source.dimensions
@@ -188,6 +224,22 @@ def format_workbook(
     for cell in exceptions[1]:
         cell.font = Font(bold=True, color="FFFFFF")
         cell.fill = PatternFill("solid", fgColor="9C3B2E")
+    breakdown = book["Breakdown"]
+    breakdown.freeze_panes = "A2"
+    breakdown.auto_filter.ref = breakdown.dimensions
+    for cell in breakdown[1]:
+        cell.font = Font(bold=True, color="FFFFFF")
+        cell.fill = PatternFill("solid", fgColor="1F4E78")
+    for column in breakdown.columns:
+        breakdown.column_dimensions[get_column_letter(column[0].column)].width = min(
+            max(len(str(cell.value or "")) for cell in column) + 2, 36
+        )
+    for row_index in range(2, breakdown.max_row + 1):
+        status = breakdown.cell(row_index, breakdown.max_column)
+        if status.value == "Miss":
+            status.font = Font(bold=True, color="C00000")
+        else:
+            status.font = Font(bold=True, color="39802D")
     dashboard = book.create_sheet("Dashboard", 0)
     dashboard.merge_cells("A1:P1")
     dashboard["A1"] = "PRODUCTION PLAN vs ACHIEVED (WTD) (Tons)"
@@ -202,12 +254,8 @@ def format_workbook(
     )
     dashboard["A2"].font = Font(size=10, italic=True, color="404040")
     chart_data = book["Chart_Data"]
-    if len(active_families) <= 6:
-        positions = ["A4", "AG4", "A22", "O22", "AI22", "AW22"]
-        chart_widths = [32, 24, 14, 20, 14, 18]
-    else:
-        positions = ["A4", "AG4", "A22", "X22", "AU22", "A40", "AG40"]
-        chart_widths = [32, 32, 20, 20, 20, 32, 32]
+    positions = ["A4", "L4", "A21", "L21", "A38", "L38", "A55"]
+    chart_widths = [17] * len(active_families)
     colors = ["176B87", "39802D"]
     for index, family in enumerate(active_families):
         product_column = index * 3 + 1
@@ -227,7 +275,7 @@ def format_workbook(
         title = "HALB" if family == "HALB" else f"FERT ({family})"
         chart.title = f"{title} - Plan Vs Achieved"
         chart.y_axis.title = "Tons"
-        chart.x_axis.title = "Product"
+        chart.x_axis.title = "Material Description"
         chart.legend.position = "b"
         chart.style = 10
         chart.add_data(
@@ -246,10 +294,77 @@ def format_workbook(
         for series, color in zip(chart.series, colors):
             series.graphicalProperties.solidFill = color
             series.graphicalProperties.line.solidFill = color
+        planned_column = product_column + 1
+        achieved_column = product_column + 2
+        chart.series[1].dPt = [
+            DataPoint(
+                idx=point_index,
+                spPr=GraphicalProperties(
+                    solidFill=(
+                        "C00000"
+                        if float(chart_data.cell(point_index + 2, achieved_column).value or 0)
+                        < float(chart_data.cell(point_index + 2, planned_column).value or 0)
+                        else "39802D"
+                    )
+                ),
+            )
+            for point_index in range(last_data_row - first_data_row + 1)
+        ]
         dashboard.add_chart(chart, positions[index])
     dashboard.sheet_view.showGridLines = False
     dashboard.freeze_panes = "A3"
     book.save(path)
+    create_native_pivot(path)
+
+
+def create_native_pivot(path: Path) -> None:
+    import win32com.client
+
+    excel = win32com.client.DispatchEx("Excel.Application")
+    excel.Visible = False
+    excel.DisplayAlerts = False
+    workbook = None
+    try:
+        workbook = excel.Workbooks.Open(str(path.resolve()), UpdateLinks=0, ReadOnly=False)
+        source = workbook.Worksheets("Pivot_Source")
+        pivot_sheet = workbook.Worksheets("WTD_Pivot")
+        pivot_sheet.Cells.Clear()
+        cache = workbook.PivotCaches().Create(SourceType=1, SourceData=source.UsedRange)
+        pivot = cache.CreatePivotTable(
+            TableDestination=pivot_sheet.Cells(4, 1),
+            TableName="COIDWtdPivot",
+        )
+        for position, field_name in enumerate(("Material", "Material Description", "Order Type"), 1):
+            field = pivot.PivotFields(field_name)
+            field.Orientation = 3
+            field.Position = position
+            try:
+                field.Subtotals = (False,) * 12
+            except Exception:
+                pass
+        date_field = pivot.PivotFields("Basic Start Date")
+        date_field.Orientation = 2
+        date_field.Position = 1
+        try:
+            date_field.Subtotals = (False,) * 12
+        except Exception:
+            pass
+        value_field = pivot.PivotFields("Delivered Quantity")
+        value_field.Orientation = 4
+        value_field.Function = -4157
+        value_field.Name = "Sum of Delivered Quantity"
+        pivot.RowAxisLayout(1)
+        pivot.RowGrand = False
+        pivot.ColumnGrand = False
+        pivot.TableStyle2 = "PivotStyleMedium2"
+        pivot_sheet.Columns.AutoFit()
+        source.Visible = 2
+        pivot_sheet.Activate()
+        workbook.Save()
+    finally:
+        if workbook is not None:
+            workbook.Close(SaveChanges=True)
+        excel.Quit()
 
 
 if __name__ == "__main__":
