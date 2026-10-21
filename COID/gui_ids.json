@@ -1,5 +1,5 @@
 {
-  "_comment": "Populate technical SAP GUI IDs from a recorded COID run. Labels/screenshots alone do not expose findById IDs.",
+  "_comment": "Technical SAP GUI IDs from a recorded COID run",
   "transaction": "/nCOID",
   "continue": "",
   "process_plnd_orders": "wnd[0]/usr/ctxtP_AUTFP",

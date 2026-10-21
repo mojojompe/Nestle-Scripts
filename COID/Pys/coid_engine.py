@@ -43,6 +43,7 @@ REQUIRED_COLUMNS = [
     "Basic Start Date",
     "Planned Quantity",
     "Delivered Quantity",
+    "Unit of measure",
     "Order Type",
 ]
 ALIASES = {
@@ -56,6 +57,8 @@ ALIASES = {
     "planned quantity": "Planned Quantity",
     "delivered quantity": "Delivered Quantity",
     "delivered qty": "Delivered Quantity",
+    "unit of measure": "Unit of measure",
+    "uom": "Unit of measure",
     "order type": "Order Type",
 }
 
@@ -80,10 +83,19 @@ def load_ids(log: logging.Logger | None = None) -> dict[str, str]:
     return ids
 
 
-def current_week() -> tuple[date, date]:
-    today = date.today()
+def reporting_period(today: date | None = None) -> tuple[date, date, str]:
+    today = today or date.today()
     monday = today - timedelta(days=today.weekday())
-    return monday, monday + timedelta(days=6)
+    if today.weekday() == 0:
+        period_start = monday - timedelta(days=7)
+        period_end = monday - timedelta(days=1)
+        iso = period_start.isocalendar()
+        report_tag = f"Week{iso.week:02d}_{iso.year}"
+    else:
+        period_start = monday
+        period_end = today
+        report_tag = today.strftime("%Y-%m-%d")
+    return period_start, period_end, report_tag
 
 
 def require_ids(ids: dict[str, str], names: list[str]) -> None:
@@ -131,7 +143,11 @@ def choose(session, ids: dict[str, str], name: str, log: logging.Logger) -> None
     log.info("STEP complete: select %s", name)
 
 
-def wait_for_file(path: Path, timeout: int = 180) -> None:
+def wait_for_file(
+    path: Path,
+    timeout: int = 180,
+    log: logging.Logger | None = None,
+) -> None:
     """Wait until SAP/OneDrive has finished publishing a readable export."""
     deadline = time.monotonic() + timeout
     last_error: OSError | None = None
@@ -146,6 +162,7 @@ def wait_for_file(path: Path, timeout: int = 180) -> None:
                     return
         except OSError as error:
             last_error = error
+            close_export_workbook_in_excel(path, log)
         time.sleep(1)
     raise RuntimeError(
         f"SAP export was not readable within {timeout}s: {path} "
@@ -153,17 +170,56 @@ def wait_for_file(path: Path, timeout: int = 180) -> None:
     )
 
 
-def read_excel_with_retry(path: Path, timeout: int = 30) -> pd.DataFrame:
-    """Retry SAP/OneDrive file-lock errors while importing the export."""
+def close_export_workbook_in_excel(path: Path, log: logging.Logger | None = None) -> bool:
+    """Close only this saved export if SAP opened it in the active Excel instance."""
+    try:
+        import win32com.client
+
+        excel = win32com.client.GetObject(None, "Excel.Application")
+    except Exception:
+        return False
+
+    try:
+        for workbook in excel.Workbooks:
+            try:
+                if str(workbook.Name).casefold() != path.name.casefold():
+                    continue
+                if not workbook.Saved:
+                    if log:
+                        log.warning("Leaving modified Excel workbook open: %s", path.name)
+                    return False
+                workbook.Close(SaveChanges=False)
+                if log:
+                    log.info("Closed SAP-opened export workbook: %s", path.name)
+                return True
+            except Exception as error:
+                if log:
+                    log.warning("Could not close SAP export workbook %s: %s", path.name, error)
+                return False
+    except Exception as error:
+        if log:
+            log.warning("Could not inspect Excel workbooks for %s: %s", path.name, error)
+    return False
+
+
+def read_excel_with_retry(
+    path: Path,
+    timeout: int = 30,
+    log: logging.Logger | None = None,
+) -> pd.DataFrame:
+    """Release SAP's matching Excel workbook and retry transient file locks."""
     deadline = time.monotonic() + timeout
     while True:
         try:
-            return pd.read_excel(path, dtype=str)
+            with pd.ExcelFile(path) as workbook:
+                sheet_name = "Data" if "Data" in workbook.sheet_names else workbook.sheet_names[0]
+                return pd.read_excel(workbook, sheet_name=sheet_name, dtype=str)
         except PermissionError as error:
             if time.monotonic() >= deadline:
                 raise RuntimeError(
                     f"SAP export remained locked for {timeout}s: {path}"
                 ) from error
+            close_export_workbook_in_excel(path, log)
             time.sleep(0.5)
 
 
@@ -247,14 +303,14 @@ def export_current_report(session, ids: dict[str, str], raw_path: Path, log: log
     with_retry(lambda: generate.press(), label="Generate Save File export", session=session)
     log.info("STEP complete: generate Save File export")
     snapshot_window(session, "wnd[1]", log)
-    wait_for_file(raw_path)
+    wait_for_file(raw_path, log=log)
     log.info("Raw COID export: %s", raw_path)
 
 
 def normalize(raw_path: Path, clean_path: Path, log: logging.Logger) -> Path:
     log.info("STEP normalize export: %s", raw_path)
     if raw_path.suffix.lower() in {".xlsx", ".xls"}:
-        frame = read_excel_with_retry(raw_path)
+        frame = read_excel_with_retry(raw_path, log=log)
     else:
         frame = pd.read_csv(raw_path, dtype=str, encoding="utf-8-sig", keep_default_na=False)
     frame.columns = [str(column).replace("\ufeff", "").strip() for column in frame.columns]
@@ -265,7 +321,9 @@ def normalize(raw_path: Path, clean_path: Path, log: logging.Logger) -> Path:
         raise RuntimeError(f"COID export is missing required columns: {missing}")
     frame["Material"] = frame["Material"].astype(str).str.strip()
     frame["Material Type"] = frame["Material"].str[0].map({"4": "HALB", "1": "FERT"}).fillna("Other")
-    frame["Basic Start Date"] = pd.to_datetime(frame["Basic Start Date"], dayfirst=True, errors="coerce").dt.strftime("%Y-%m-%d")
+    frame["Basic Start Date"] = pd.to_datetime(
+        frame["Basic Start Date"], format="mixed", dayfirst=True, errors="coerce"
+    ).dt.strftime("%Y-%m-%d")
     frame["Planned Quantity"] = pd.to_numeric(frame["Planned Quantity"].astype(str).str.replace(",", "", regex=False), errors="coerce").fillna(0)
     frame["Delivered Quantity"] = pd.to_numeric(frame["Delivered Quantity"].astype(str).str.replace(",", "", regex=False), errors="coerce").fillna(0)
     frame = frame[frame["Material"].astype(str).str.strip() != ""].copy()
@@ -276,7 +334,7 @@ def normalize(raw_path: Path, clean_path: Path, log: logging.Logger) -> Path:
     return clean_path
 
 
-def run(dry_run: bool = False) -> Path | None:
+def run(dry_run: bool = False, today: date | None = None) -> Path | None:
     log = logger()
     log.info("STEP start COID run (dry_run=%s)", dry_run)
     session = None
@@ -285,12 +343,12 @@ def run(dry_run: bool = False) -> Path | None:
         required_ids = ["process_plnd_orders", "profile", "layout", "header_plant_from", "basic_start_date_from", "basic_start_date_to", "execute", "export_grid", "export_popup_button", "export_filename", "save_file_directory", "save_file_name", "save_file_generate"]
         require_ids(ids, required_ids)
         log.info("Validated required GUI IDs: %s", ", ".join(required_ids))
-        week_start, week_end = current_week()
+        week_start, week_end, report_tag = reporting_period(today)
         stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         raw_path = OUTPUT_DIR / f"COID_4981_{stamp}.xlsx"
         clean_path = CLEAN_DIR / "COID_4981_clean.csv"
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-        log.info("COID current week: %s .. %s", week_start, week_end)
+        log.info("COID report period %s: %s .. %s", report_tag, week_start, week_end)
         log.info("STEP connect to SAP")
         try:
             sap_prompt_stop = start_sap_connection_prompt_watcher()
@@ -328,6 +386,12 @@ def run(dry_run: bool = False) -> Path | None:
         log.info("STEP complete: execute COID")
         time.sleep(2)
         export_current_report(session, ids, raw_path, log)
+        try:
+            session.findById("wnd[0]").close()
+            log.info("SAP COID session closed before reading export")
+            session = None
+        except Exception as error:
+            log.warning("Could not close SAP COID session before reading export: %s", error)
         return normalize(raw_path, clean_path, log)
     except Exception:
         log.exception("COID run failed; inspect the preceding STEP/GUI lookup entry")
