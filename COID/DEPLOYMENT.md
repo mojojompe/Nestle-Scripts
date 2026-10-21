@@ -66,7 +66,7 @@ Set-Location "<workspace root>"
 & ".\COID\Register_COID_Daily_Task.ps1"
 ```
 
-The script registers `COID Daily Plan versus Achieved` for Monday-Friday at 08:00 under the current interactive Windows account. It calls `COID\Pys\coid_daily.py`, so extraction, sorting, and report generation are all part of the scheduled action.
+The script registers `COID Daily Plan versus Achieved` for Monday-Friday at 08:00 and on Windows resume events under the current interactive Windows account. It wakes a sleeping PC for the scheduled 08:00 run. The resume trigger calls the same full workflow, but `--skip-if-valid-report` prevents another SAP extraction if a complete report already exists for the current period. A fully shut-down PC cannot be woken by a scheduled task; `StartWhenAvailable` runs a missed task when Windows next starts and the user is logged in.
 
 Verify registration and the next run:
 
