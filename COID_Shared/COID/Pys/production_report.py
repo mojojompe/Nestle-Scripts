@@ -367,6 +367,7 @@ def create_native_pivot(path: Path) -> None:
         pivot_sheet.Columns.AutoFit()
         source.Visible = 2
         pivot_sheet.Activate()
+        pivot_sheet.Range("A1").Select()
         workbook.Save()
     finally:
         if workbook is not None:

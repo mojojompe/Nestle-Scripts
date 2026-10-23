@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import logging
+import os
 import sys
 from datetime import date
 from pathlib import Path
@@ -66,6 +67,11 @@ def main(skip_if_valid_report: bool = False) -> int:
         )
         log.info("STEP daily workflow complete: %s", report)
         print(f"COID daily workbook: {report}")
+        try:
+            os.startfile(str(report))
+            log.info("Opened completed COID workbook: %s", report)
+        except OSError as error:
+            log.warning("Report completed but could not be opened automatically: %s", error)
         return 0
     except Exception:
         log.exception("Daily COID workflow failed")
