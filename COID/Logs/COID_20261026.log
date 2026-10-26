@@ -1,0 +1,70 @@
+2026-10-26 08:00:04,363 | INFO | STEP start COID run (dry_run=False)
+2026-10-26 08:00:04,391 | INFO | Loaded GUI ID configuration: C:\Users\ngjompeem\OneDrive - NESTLE\Documents\All_Locations_for Emmanuel\COID\gui_ids.json
+2026-10-26 08:00:04,391 | INFO | Validated required GUI IDs: process_plnd_orders, profile, layout, header_plant_from, basic_start_date_from, basic_start_date_to, execute, export_grid, export_popup_button, export_filename, save_file_directory, save_file_name, save_file_generate
+2026-10-26 08:00:04,392 | INFO | COID report period Week43_2026: 2026-10-19 .. 2026-10-25
+2026-10-26 08:00:04,413 | INFO | STEP connect to SAP
+2026-10-26 08:00:11,213 | INFO | STEP initialize SAP connection
+2026-10-26 08:00:21,175 | INFO | COID_4981: session stabilized after 2.0s (3 probes)
+2026-10-26 08:00:21,175 | INFO | STEP open transaction: /nCOID
+2026-10-26 08:00:22,231 | INFO | Opened COID via okcd
+2026-10-26 08:00:22,233 | INFO | STEP continue from COID object selection via Enter
+2026-10-26 08:00:23,331 | INFO | STEP complete: continue from COID object selection
+2026-10-26 08:00:23,332 | INFO | STEP set process_plnd_orders = 1
+2026-10-26 08:00:23,332 | INFO | GUI lookup: process_plnd_orders -> wnd[0]/usr/ctxtP_AUTFP
+2026-10-26 08:00:23,391 | INFO | GUI control found: process_plnd_orders
+2026-10-26 08:00:23,406 | INFO | STEP complete: set process_plnd_orders
+2026-10-26 08:00:23,406 | INFO | STEP set profile = 000001
+2026-10-26 08:00:23,406 | INFO | GUI lookup: profile -> wnd[0]/usr/ctxtP_PROFID
+2026-10-26 08:00:23,409 | INFO | GUI control found: profile
+2026-10-26 08:00:23,412 | INFO | STEP complete: set profile
+2026-10-26 08:00:23,412 | INFO | STEP set layout = FGCOID
+2026-10-26 08:00:23,412 | INFO | GUI lookup: layout -> wnd[0]/usr/ctxtP_LAYOUT
+2026-10-26 08:00:23,415 | INFO | GUI control found: layout
+2026-10-26 08:00:23,418 | INFO | STEP complete: set layout
+2026-10-26 08:00:23,418 | INFO | STEP set header_plant_from = 4981
+2026-10-26 08:00:23,418 | INFO | GUI lookup: header_plant_from -> wnd[0]/usr/ctxtS_WERKS-LOW
+2026-10-26 08:00:23,421 | INFO | GUI control found: header_plant_from
+2026-10-26 08:00:23,423 | INFO | STEP complete: set header_plant_from
+2026-10-26 08:00:23,424 | INFO | STEP set basic_start_date_from = 19.10.2026
+2026-10-26 08:00:23,424 | INFO | GUI lookup: basic_start_date_from -> wnd[0]/usr/ctxtS_ECKST-LOW
+2026-10-26 08:00:23,436 | INFO | GUI control found: basic_start_date_from
+2026-10-26 08:00:23,439 | INFO | STEP complete: set basic_start_date_from
+2026-10-26 08:00:23,439 | INFO | STEP set basic_start_date_to = 25.10.2026
+2026-10-26 08:00:23,439 | INFO | GUI lookup: basic_start_date_to -> wnd[0]/usr/ctxtS_ECKST-HIGH
+2026-10-26 08:00:23,447 | INFO | GUI control found: basic_start_date_to
+2026-10-26 08:00:23,450 | INFO | STEP complete: set basic_start_date_to
+2026-10-26 08:00:23,451 | INFO | COID selections applied: process/planned=1, profile=000001, plant=4981
+2026-10-26 08:00:23,451 | INFO | STEP execute COID: wnd[0]/tbar[1]/btn[8]
+2026-10-26 08:00:23,451 | INFO | GUI lookup: execute -> wnd[0]/tbar[1]/btn[8]
+2026-10-26 08:00:23,453 | INFO | GUI control found: execute
+2026-10-26 08:00:26,724 | INFO | STEP complete: execute COID
+2026-10-26 08:00:28,725 | INFO | STEP open ALV export menu
+2026-10-26 08:00:28,725 | INFO | GUI lookup: export_grid -> wnd[0]/usr/cntlGRID_0100/shellcont/shell
+2026-10-26 08:00:28,734 | INFO | GUI control found: export_grid
+2026-10-26 08:00:31,644 | INFO | STEP complete: open ALV export dialog
+2026-10-26 08:00:32,646 | INFO | STEP set export_filename = COID_4981_20261026_080004.xlsx
+2026-10-26 08:00:32,646 | INFO | GUI lookup: export_filename -> wnd[1]/usr/ssubSUB_CONFIGURATION:SAPLSALV_GUI_CUL_EXPORT_AS:0512/txtGS_EXPORT-FILE_NAME
+2026-10-26 08:00:32,659 | INFO | GUI control found: export_filename
+2026-10-26 08:00:32,674 | INFO | STEP complete: set export_filename
+2026-10-26 08:00:32,675 | INFO | STEP select Export to... button
+2026-10-26 08:00:32,675 | INFO | GUI lookup: export_popup_button -> wnd[1]/tbar[0]/btn[20]
+2026-10-26 08:00:32,685 | INFO | GUI control found: export_popup_button
+2026-10-26 08:00:34,161 | INFO | STEP complete: select Export to... button
+2026-10-26 08:00:34,161 | INFO | STEP set save_file_directory = C:\Users\ngjompeem\OneDrive - NESTLE\Documents\All_Locations_for Emmanuel\COID\OutputFile
+2026-10-26 08:00:34,161 | INFO | GUI lookup: save_file_directory -> wnd[1]/usr/ctxtDY_PATH
+2026-10-26 08:00:34,244 | INFO | GUI control found: save_file_directory
+2026-10-26 08:00:34,247 | INFO | STEP complete: set save_file_directory
+2026-10-26 08:00:34,247 | INFO | STEP set save_file_name = COID_4981_20261026_080004.xlsx
+2026-10-26 08:00:34,248 | INFO | GUI lookup: save_file_name -> wnd[1]/usr/ctxtDY_FILENAME
+2026-10-26 08:00:34,256 | INFO | GUI control found: save_file_name
+2026-10-26 08:00:34,271 | INFO | STEP complete: set save_file_name
+2026-10-26 08:00:34,271 | INFO | STEP generate Save File export
+2026-10-26 08:00:34,272 | INFO | GUI lookup: save_file_generate -> wnd[1]/tbar[0]/btn[0]
+2026-10-26 08:00:34,283 | INFO | GUI control found: save_file_generate
+2026-10-26 08:00:38,052 | INFO | STEP complete: generate Save File export
+2026-10-26 08:00:38,187 | WARNING | GUI snapshot skipped; window not found: wnd[1]
+2026-10-26 08:00:39,520 | INFO | Closed SAP-opened export workbook: COID_4981_20261026_080004.xlsx
+2026-10-26 08:00:41,536 | INFO | Raw COID export: C:\Users\ngjompeem\OneDrive - NESTLE\Documents\All_Locations_for Emmanuel\COID\OutputFile\COID_4981_20261026_080004.xlsx
+2026-10-26 08:00:41,920 | INFO | SAP COID session closed before reading export
+2026-10-26 08:00:41,920 | INFO | STEP normalize export: C:\Users\ngjompeem\OneDrive - NESTLE\Documents\All_Locations_for Emmanuel\COID\OutputFile\COID_4981_20261026_080004.xlsx
+2026-10-26 08:00:41,969 | INFO | Clean COID rows=247: C:\Users\ngjompeem\OneDrive - NESTLE\Documents\All_Locations_for Emmanuel\COID\CleanFile\COID_4981_clean.csv
