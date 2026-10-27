@@ -171,34 +171,99 @@ def wait_for_file(
 
 
 def close_export_workbook_in_excel(path: Path, log: logging.Logger | None = None) -> bool:
-    """Close only this saved export if SAP opened it in the active Excel instance."""
+    """Close only this saved export, even if it is in a secondary Excel instance."""
     try:
-        import win32com.client
+        import ctypes
+        from ctypes import wintypes
+        from uuid import UUID
 
-        excel = win32com.client.GetObject(None, "Excel.Application")
+        import pythoncom
+        import win32com.client
+        import win32gui
     except Exception:
         return False
 
+    class GUID(ctypes.Structure):
+        _fields_ = [
+            ("Data1", wintypes.DWORD),
+            ("Data2", wintypes.WORD),
+            ("Data3", wintypes.WORD),
+            ("Data4", ctypes.c_ubyte * 8),
+        ]
+
+    expected_title = path.stem.casefold()
+    windows: list[int] = []
+
+    def find_export_window(hwnd, _):
+        try:
+            if (
+                win32gui.GetClassName(hwnd) == "XLMAIN"
+                and expected_title in win32gui.GetWindowText(hwnd).casefold()
+            ):
+                windows.append(hwnd)
+        except Exception:
+            pass
+
     try:
-        for workbook in excel.Workbooks:
-            try:
-                if str(workbook.Name).casefold() != path.name.casefold():
-                    continue
-                if not workbook.Saved:
-                    if log:
-                        log.warning("Leaving modified Excel workbook open: %s", path.name)
-                    return False
-                workbook.Close(SaveChanges=False)
-                if log:
-                    log.info("Closed SAP-opened export workbook: %s", path.name)
-                return True
-            except Exception as error:
-                if log:
-                    log.warning("Could not close SAP export workbook %s: %s", path.name, error)
-                return False
+        win32gui.EnumWindows(find_export_window, None)
     except Exception as error:
         if log:
-            log.warning("Could not inspect Excel workbooks for %s: %s", path.name, error)
+            log.warning("Could not enumerate Excel windows for %s: %s", path.name, error)
+        return False
+
+    iid = GUID.from_buffer_copy(UUID(str(pythoncom.IID_IDispatch)).bytes_le)
+    accessible_object = ctypes.OleDLL("oleacc").AccessibleObjectFromWindow
+    accessible_object.argtypes = [
+        wintypes.HWND,
+        wintypes.DWORD,
+        ctypes.POINTER(GUID),
+        ctypes.POINTER(ctypes.c_void_p),
+    ]
+    accessible_object.restype = ctypes.HRESULT
+    try:
+        for hwnd in windows:
+            child_windows: list[int] = []
+
+            def find_excel_object(child, _):
+                try:
+                    if win32gui.GetClassName(child) == "EXCEL7":
+                        child_windows.append(child)
+                except Exception:
+                    pass
+
+            win32gui.EnumChildWindows(hwnd, find_excel_object, None)
+            for child in child_windows:
+                pointer = ctypes.c_void_p()
+                result = accessible_object(
+                    child,
+                    0xFFFFFFF0,
+                    ctypes.byref(iid),
+                    ctypes.byref(pointer),
+                )
+                if result != 0 or not pointer.value:
+                    continue
+                workbook_window = win32com.client.Dispatch(
+                    pythoncom.ObjectFromAddress(pointer.value, pythoncom.IID_IDispatch)
+                )
+                try:
+                    workbook = workbook_window.Parent
+                    if str(workbook.Name).casefold() != path.name.casefold():
+                        continue
+                    if not workbook.Saved:
+                        if log:
+                            log.warning("Leaving modified Excel workbook open: %s", path.name)
+                        return False
+                    workbook.Close(SaveChanges=False)
+                    if log:
+                        log.info("Closed SAP-opened export workbook: %s", path.name)
+                    return True
+                except Exception as error:
+                    if log:
+                        log.warning("Could not close SAP export workbook %s: %s", path.name, error)
+                    return False
+    except Exception as error:
+        if log:
+            log.warning("Could not inspect Excel window for %s: %s", path.name, error)
     return False
 
 
