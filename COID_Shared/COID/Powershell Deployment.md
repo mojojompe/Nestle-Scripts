@@ -2,7 +2,7 @@
 
 **By Jompe Emmanuel Ayomiposi, +234 807 145 5374**
 
-I use this guide to set up the COID_Shared copy on a colleague's Windows PC. The colleague signs in with their own Windows and authorized SAP accounts. I do not share my Python environment, credentials, logs, or exported reports. Paste each numbered code block into the same PowerShell terminal, in order; do not type the `PS>` prompt.
+Use this guide to set up the COID_Shared copy on a colleague's Windows PC. The colleague should sign in with their own Windows and authorized SAP accounts. Do not share any Python environment, credentials, logs, or exported reports. Paste each numbered code block into the same PowerShell terminal, in order; do not type the `PS>` prompt.
 
 ## 1. Copy the automation folder
 

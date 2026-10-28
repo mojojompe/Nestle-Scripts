@@ -2,7 +2,7 @@
 
 **By Jompe Emmanuel Ayomiposi, +234 807 145 5374**
 
-I use this guide to set up COID_Shared in **Windows Command Prompt (`cmd.exe`)** on a colleague's PC. The colleague signs in with their own Windows and authorized SAP accounts. I do not share my Python environment, credentials, logs, or exported reports. Paste each numbered code block into the same Command Prompt window, in order. Do not type the `C:\...>` prompt.
+Use this guide to set up COID_Shared in **Windows Command Prompt (`cmd.exe`)** on a colleague's PC. The colleague should sign in with their own Windows and authorized SAP accounts. Do not share any Python environment, credentials, logs, or exported reports. Paste each numbered code block into the same Command Prompt window, in order. Do not type the `C:\...>` prompt.
 
 ## 1. Confirm prerequisites and files
 
