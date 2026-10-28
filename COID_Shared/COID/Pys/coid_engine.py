@@ -148,7 +148,7 @@ def wait_for_file(
     timeout: int = 180,
     log: logging.Logger | None = None,
 ) -> None:
-    """Wait until SAP/OneDrive has finished publishing a readable export."""
+    """Wait until SAP and OneDrive finish writing an export I can read."""
     deadline = time.monotonic() + timeout
     last_error: OSError | None = None
     while time.monotonic() < deadline:
@@ -171,7 +171,7 @@ def wait_for_file(
 
 
 def close_export_workbook_in_excel(path: Path, log: logging.Logger | None = None) -> bool:
-    """Close only this saved export, even if it is in a secondary Excel instance."""
+    """Close only the saved Excel workbook that matches this export file."""
     try:
         import ctypes
         from ctypes import wintypes
@@ -272,7 +272,7 @@ def read_excel_with_retry(
     timeout: int = 30,
     log: logging.Logger | None = None,
 ) -> pd.DataFrame:
-    """Release SAP's matching Excel workbook and retry transient file locks."""
+    """Retry the Excel read while I release a temporary file lock."""
     deadline = time.monotonic() + timeout
     while True:
         try:
@@ -289,7 +289,7 @@ def read_excel_with_retry(
 
 
 def snapshot_window(session, window_id: str, log: logging.Logger) -> None:
-    """Write the current SAP window controls without changing the UI."""
+    """Record the SAP controls I can see without changing the window."""
     try:
         root = session.findById(window_id, False)
         if root is None:

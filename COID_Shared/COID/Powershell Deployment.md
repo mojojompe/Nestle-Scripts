@@ -1,6 +1,8 @@
 # COID Shared Setup - PowerShell
 
-Follow these steps on the colleague's Windows PC. Use the same Windows account that has SAP access. Do not copy your `.conda` environment, credentials, logs, or exported reports. Paste each numbered step's entire code block into the same terminal, in order. Do not type the `PS>` prompt text.
+**By Jompe Emmanuel Ayomiposi, +234 807 145 5374**
+
+I use this guide to set up the COID_Shared copy on a colleague's Windows PC. The colleague signs in with their own Windows and authorized SAP accounts. I do not share my Python environment, credentials, logs, or exported reports. Paste each numbered code block into the same PowerShell terminal, in order; do not type the `PS>` prompt.
 
 ## 1. Copy the automation folder
 
@@ -16,7 +18,7 @@ COID_Shared\
     Pys\
 ```
 
-The `COID` and `_Shared` folders must remain side by side. The copied version intentionally does not set a COID layout.
+Keep `COID` and `_Shared` side by side. This copy intentionally leaves the COID layout unchanged.
 
 ## 2. Confirm prerequisites
 
@@ -25,18 +27,18 @@ The `COID` and `_Shared` folders must remain side by side. The copied version in
 - The saved SAP connection is named `Regional Systems - 6. Production - AOA - S4 ERP MONO on HANA (O9A)`.
 - Company-approved Conda/Miniconda is installed.
 
-Open PowerShell and check Conda:
+Open PowerShell and check that Conda is available:
 
 ```powershell
 Get-Command conda -ErrorAction SilentlyContinue
 conda --version
 ```
 
-If PowerShell says `conda` is not recognized, stop and install or initialize the company-approved Conda distribution. Do not continue to `conda create` until `conda --version` works.
+If PowerShell cannot find `conda`, install or initialize the company-approved Conda distribution. Continue only after `conda --version` works.
 
 ## 3. Choose how to open PowerShell
 
-Use **one** of these methods. Both use PowerShell commands.
+Choose one method. Both use PowerShell commands.
 
 ### A. VS Code integrated PowerShell terminal
 
@@ -96,7 +98,7 @@ The dry run opens SAP and fills in the selection fields, but does not execute or
 & $python ".\Pys\coid_daily.py"
 ```
 
-The full workflow exports and sorts the SAP data, creates the PivotTable, Dashboard, and Breakdown, then opens the finished workbook. Monday reports the previous Monday-Sunday; Tuesday-Friday reports the current Monday through yesterday.
+The full workflow exports and sorts SAP data, creates the PivotTable, Dashboard, and Breakdown, then opens the finished workbook. On Monday, it reports the previous Monday-Sunday. Tuesday-Friday, it reports the current Monday through yesterday.
 
 ## 6. Register the weekday 8am and resume scheduler
 
@@ -107,7 +109,7 @@ Set-Location $coidShared
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $coidShared "COID\Register_COID_Daily_Task.ps1")
 ```
 
-The task is named `COID Shared Plan versus Achieved`. It runs Monday-Friday at 08:00 and on Windows resume. A resume run skips weekends and skips SAP if a complete report for the current period already exists. The task runs as the logged-in interactive user, so the colleague must be signed in and SAP/network access must be available. `WakeToRun` may wake a sleeping PC; a fully shut-down PC cannot be woken by Task Scheduler.
+Task Scheduler creates `COID Shared Plan versus Achieved`. It runs Monday-Friday at 08:00 and when Windows resumes. On resume, it skips weekends and skips SAP when a complete report already exists for the current period. The colleague must stay signed in with SAP/network access. `WakeToRun` can wake a sleeping PC; Task Scheduler cannot wake a fully shut-down PC.
 
 ## 7. Verify the scheduled task
 
@@ -118,4 +120,4 @@ $task | Select-Object TaskName, State, @{Name="User"; Expression={$_.Principal.U
 $info | Select-Object LastRunTime, LastTaskResult, NextRunTime
 ```
 
-`LastTaskResult` of `0` indicates success. Reports are saved in `COID\Export`; raw exports, clean data, and logs are in `COID\OutputFile`, `COID\CleanFile`, and `COID\Logs`.
+Check `LastTaskResult`: `0` means the task succeeded. The workflow saves reports in `COID\Export`, raw exports in `COID\OutputFile`, sorted data in `COID\CleanFile`, and logs in `COID\Logs`.

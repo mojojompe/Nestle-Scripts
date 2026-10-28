@@ -1,5 +1,5 @@
 {
-  "_comment": "Technical SAP GUI IDs from a recorded COID run",
+  "_comment": "I recorded these SAP GUI IDs during a COID run. This shared copy does not set a layout.",
   "transaction": "/nCOID",
   "continue": "",
   "process_plnd_orders": "wnd[0]/usr/ctxtP_AUTFP",

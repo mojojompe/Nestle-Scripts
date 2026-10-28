@@ -1,6 +1,8 @@
 # COID Shared Automation Diagrams
 
-These diagrams describe the layout-free `COID_Shared` copy.
+**By Jompe Emmanuel Ayomiposi, +234 807 145 5374**
+
+I use these diagrams to explain how the layout-free `COID_Shared` copy runs.
 
 ## Sequence
 

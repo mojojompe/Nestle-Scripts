@@ -13,7 +13,7 @@ MK_E_SYNTAX = -2147221020  # 0x800401E4: "SAPGUI" not yet in the Running Object 
 def start_sap_connection_prompt_watcher(
     sap_logon_name: str = "Regional Systems - 6. Production - AOA - S4 ERP MONO on HANA (O9A)",
 ) -> threading.Event:
-    """Dismiss only SAP's explicit scripting connection-warning dialog."""
+    """Watch for and confirm only the expected SAP scripting warning."""
     stop_event = threading.Event()
 
     def watch() -> None:
@@ -58,7 +58,7 @@ def start_sap_connection_prompt_watcher(
 
 
 def _saplgpad_running() -> bool:
-    """Return True if saplgpad.exe (SAP Logon Pad) is currently running."""
+    """Check whether saplgpad.exe is already running."""
     try:
         out = subprocess.check_output(
             ['tasklist', '/FI', 'IMAGENAME eq saplgpad.exe'],
@@ -70,7 +70,7 @@ def _saplgpad_running() -> bool:
 
 
 def _get_scripting_engine(timeout: int = 60, poll: float = 1.0):
-    """Poll GetObject('SAPGUI') until the scripting engine registers in the ROT."""
+    """Keep checking SAP's Running Object Table until scripting is ready."""
     deadline = time.time() + timeout
     last_err = None
     while time.time() < deadline:
@@ -79,8 +79,8 @@ def _get_scripting_engine(timeout: int = 60, poll: float = 1.0):
             return SapGuiAuto.GetScriptingEngine
         except pythoncom.com_error as e:
             last_err = e
-            # MK_E_SYNTAX => SAPGUI simply not in ROT yet; keep waiting.
-            # Any other COM error is a real problem -> re-raise now.
+            # SAPGUI is not registered yet; wait and try again.
+            # Re-raise other COM errors because they indicate a different failure.
             if e.args[0] != MK_E_SYNTAX:
                 raise
             time.sleep(poll)
@@ -93,21 +93,21 @@ def trigger_sap(
     sap_logon_name="Regional Systems - 6. Production - AOA - S4 ERP MONO on HANA (O9A)",
     timeout: int = 60,
 ):
-    """Start SAP Logon Pad (if needed) and open the requested connection, returning the session."""
-    # 1) Launch saplgpad only if it isn't already up (avoids duplicates)
+    """Start SAP Logon Pad when needed and return a session for the connection."""
+    # Start Logon only when it is not already running.
     if not _saplgpad_running():
         if not os.path.exists(SAPLGPAD_EXE):
             raise FileNotFoundError(f"saplgpad.exe not found at: {SAPLGPAD_EXE}")
         print("[trigger_sap] Launching SAP Logon Pad...")
         subprocess.Popen([SAPLGPAD_EXE], close_fds=True)
 
-    # 2) Wait until the scripting engine is actually registered (fixes MK_E_SYNTAX)
+    # Wait until SAP registers its scripting engine.
     application = _get_scripting_engine(timeout=timeout)
 
-    # 3) Open asynchronously so a multiple-logon dialog can be handled by COM.
+    # Open asynchronously so SAP can show any multiple-logon prompt.
     connection = application.OpenConnection(sap_logon_name, False)
 
-    # 4) Wait for the session to be created (poll instead of a blind sleep)
+    # Poll until SAP creates the first session.
     deadline = time.time() + 15
     while connection.Children.Count == 0 and time.time() < deadline:
         time.sleep(0.25)
