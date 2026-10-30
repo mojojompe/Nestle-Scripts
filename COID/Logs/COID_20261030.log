@@ -1,0 +1,5 @@
+2026-10-30 08:00:06,374 | INFO | STEP start COID run (dry_run=False)
+2026-10-30 08:00:06,405 | INFO | Loaded GUI ID configuration: C:\Users\ngjompeem\OneDrive - NESTLE\Documents\All_Locations_for Emmanuel\COID\gui_ids.json
+2026-10-30 08:00:06,405 | INFO | Validated required GUI IDs: process_plnd_orders, profile, layout, header_plant_from, basic_start_date_from, basic_start_date_to, execute, export_grid, export_popup_button, export_filename, save_file_directory, save_file_name, save_file_generate
+2026-10-30 08:00:06,405 | INFO | COID report period 2026-10-30: 2026-10-26 .. 2026-10-29
+2026-10-30 08:00:06,405 | INFO | STEP connect to SAP
